@@ -1,5 +1,5 @@
 import Portfolio from './Portfolio'
-import Intro from './Components/Intro'
+import Intro from './Components/Intro/Intro'
 import {shallow} from 'enzyme'
 import {expect as exp} from 'chai';
 
