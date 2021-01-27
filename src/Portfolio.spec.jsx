@@ -2,6 +2,7 @@ import {shallow} from 'enzyme'
 import {expect as exp} from 'chai';
 import Portfolio from './Portfolio'
 import Intro from './Containers/Intro/Intro'
+import Articles from './Containers/Articles/Articles'
 import Projects from './Containers/Projects/Projects'
 
 describe('Portfolio Tests', ()=>{
@@ -9,13 +10,13 @@ describe('Portfolio Tests', ()=>{
     it('should render without error', ()=> {
         wrapper = shallow(<Portfolio />)
     })
-    it('should contain one Intro container', ()=>{
+    it('should contain the correct number of each container (1)', ()=>{
         wrapper = shallow(<Portfolio />)
+        
         exp(wrapper.find(Intro)).to.have.length(1)  
-    })
-    it('should contain one Projects container',()=>{
-        wrapper = shallow(<Portfolio />)
         exp(wrapper.find(Projects)).to.have.length(1)
+        exp(wrapper.find(Articles)).to.have.length(1)
     })
+   
 })
 

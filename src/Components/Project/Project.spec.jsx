@@ -2,7 +2,7 @@ import {shallow} from 'enzyme'
 import {expect as exp} from 'chai';
 import Project from './Project'
 
-describe('Project Container Tests', ()=>{
+describe('Project Component Tests', ()=>{
     let wrapper
     it('should render without error', ()=> {
         wrapper = shallow(<Project />)
@@ -11,6 +11,7 @@ describe('Project Container Tests', ()=>{
     it('should render the correct title',()=>{
         const testProject = {title: 'Test Project'}
         wrapper = shallow(<Project project={testProject} />)
+        
         exp(wrapper.find('div')).to.have.text(testProject.title)
     })
 

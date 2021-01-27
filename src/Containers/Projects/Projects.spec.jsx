@@ -3,7 +3,7 @@ import {expect as exp} from 'chai';
 import Projects from './Projects'
 import Project from '../../Components/Project/Project'
 
-describe('Project Container Tests', ()=>{
+describe('Projects Container Tests', ()=>{
     let wrapper
     it('should render without error', ()=> {
         wrapper = shallow(<Projects />)
