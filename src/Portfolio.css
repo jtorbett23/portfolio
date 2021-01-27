@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+.site-container {
+    min-height: 100vh;
+    background-color: paleturquoise;
+
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;    
+    margin-right: 15vw;
+    margin-left: 15vw;
+}
+
+body{
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+
+}
+
