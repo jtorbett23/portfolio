@@ -8,11 +8,17 @@ describe('Project Component Tests', ()=>{
         wrapper = shallow(<Project />)
     })
 
-    it('should render the correct title',()=>{
-        const testProject = {title: 'Test Project'}
+    it('should render the correct content',()=>{
+        const testProject = {
+            title: 'Test Project',
+            url: 'www.example.com',
+            description: "Example project site"
+        }
         wrapper = shallow(<Project project={testProject} />)
-        
-        exp(wrapper.find('div')).to.have.text(testProject.title)
+
+        exp(wrapper.find('h3').find('a')).to.have.text(testProject.title)
+        exp(wrapper.find('h3').find('a')).to.have.attr('href', testProject.url)
+        exp(wrapper.find('p')).to.have.text(testProject.description)
     })
 
 })

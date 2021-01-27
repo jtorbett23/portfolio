@@ -9,7 +9,9 @@
 
     "projects": [
         {
-            "title": "Project 1"
+            "title": "Portfolio Site",
+            "url": "https://jtorbett23.gitlab.io/portfolio/",
+            "description": "Portfolio site in react, deployed with Gitlab and hosted on Gitlab PAges"
         }
     ],
 
