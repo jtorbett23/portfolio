@@ -21,6 +21,8 @@ describe('Projects Container Tests', ()=>{
 
         wrapper = shallow(<Projects projects={projectsData} />)
 
+        exp(wrapper.find('h2')).to.have.length(1)
+        exp(wrapper.find('h2')).to.have.text('Projects')
         exp(wrapper.find(Project)).to.have.length(projectsData.length)
     })
 

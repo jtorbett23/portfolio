@@ -20,6 +20,8 @@ describe('Articles Container Tests', ()=>{
         ]
         wrapper = shallow(<Articles articles={articlesData}/>)
 
+        exp(wrapper.find('h2')).to.have.length(1)
+        exp(wrapper.find('h2')).to.have.text('Articles')
         exp(wrapper.find(Article)).to.have.length(articlesData.length)
 
     })
