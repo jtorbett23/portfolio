@@ -15,7 +15,10 @@
 
     "articles": [
         {
-            "title": "Article 1"
+            "title": "React + Gitlab Pages",
+            "url": "https://dev.to/jtorbett23/react-gitlab-pages-42l6",
+            "description": "How to deploy a react application with a Gitlab deployment pipeline to Gitlab pages."
+            
         }
     ]
 }

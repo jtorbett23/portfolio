@@ -8,11 +8,19 @@ describe('Article Component Tests', ()=>{
         wrapper = shallow(<Article />)
     })
 
-    it('should render the correct title',()=>{
-        const testArticle = {title: 'Test Article'}
+    it('should render the correct content',()=>{
+        const testArticle = {
+            title: 'Test Article',
+            url: 'www.example.com',
+            description: 'A test article'
+    }
         wrapper = shallow(<Article article={testArticle} />)
         
-        exp(wrapper.find('div')).to.have.text(testArticle.title)
+        exp(wrapper.find('h3').find('a')).to.have.text(testArticle.title)
+        exp(wrapper.find('h3').find('a')).to.have.attr('href', testArticle.url)
+        exp(wrapper.find('p')).to.have.text(testArticle.description)
+
+
     })
 
 })
