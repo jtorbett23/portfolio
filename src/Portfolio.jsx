@@ -1,11 +1,12 @@
 import React from 'react'
-import Intro from './Container/Intro/Intro'
+import Intro from './Containers/Intro/Intro'
+import data from './data.json'
 
 export default function Portfolio() {
     return (
         <div>
             Portfolio
-            <Intro />
+            <Intro text={data.introText.join('\n')} />
         </div>
     )
 }

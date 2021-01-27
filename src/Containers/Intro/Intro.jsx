@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Intro() {
+export default function Intro(props) {
     return (
         <div>
-            Intro
+            {props.text}
         </div>
     )
 }
