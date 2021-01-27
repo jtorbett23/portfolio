@@ -7,7 +7,7 @@ import data from './data.json'
 export default function Portfolio() {
     return (
         <div>
-            Portfolio
+            <h1>Portfolio</h1>
             <Intro text={data.introText.join('\n')} />
             <Projects projects={data.projects}/>
             <Articles articles={data.articles}/>
