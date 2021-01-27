@@ -10,7 +10,7 @@ export default function Portfolio() {
             Portfolio
             <Intro text={data.introText.join('\n')} />
             <Projects projects={data.projects}/>
-            <Articles />
+            <Articles articles={data.articles}/>
         </div>
     )
 }
