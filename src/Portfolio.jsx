@@ -8,7 +8,7 @@ export default function Portfolio() {
         <div>
             Portfolio
             <Intro text={data.introText.join('\n')} />
-            <Projects />
+            <Projects projects={data.projects}/>
         </div>
     )
 }

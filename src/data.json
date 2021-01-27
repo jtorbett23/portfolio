@@ -5,5 +5,9 @@
         "I found software development has many of these problems with there always being something new to learn.",
         "My previous work as a teacher has helped my communication and flexibility, as I learnt how to teach complex topics for a range of people with different backgrounds and abilities.",
         "I am now looking forward to trying new methods of combining my teaching experience with software development to grow as a developer (with an interest towards DevOps) and support my team members."
+    ],
+
+    "projects": [
+        {"title": "Project 1"}
     ]
 }
