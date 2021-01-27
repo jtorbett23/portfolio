@@ -1,8 +1,9 @@
-import Intro from './Intro'
 import {shallow} from 'enzyme'
 import {expect as exp} from 'chai';
+import Intro from './Intro'
 
-describe('Intro Component Tests', ()=>{
+
+describe('Intro Container Tests', ()=>{
     let wrapper
     it('should render without error', ()=> {
         wrapper = shallow(<Intro />)
