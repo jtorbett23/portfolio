@@ -13,7 +13,8 @@ describe('Intro Container Tests', ()=>{
         const testText = 'Test'
         wrapper = shallow(<Intro text={testText}/>)
         
-        exp(wrapper.find('div')).to.have.text(testText)
+        exp(wrapper.find('h2')).to.have.text('Introduction')
+        exp(wrapper.find('p')).to.have.text(testText)
     })
 })
 

@@ -3,7 +3,8 @@ import React from 'react'
 export default function Intro(props) {
     return (
         <div>
-            {props.text}
+            <h2>Introduction</h2>
+            <p>{props.text}</p>
         </div>
     )
 }
