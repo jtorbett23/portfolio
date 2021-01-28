@@ -9,13 +9,17 @@
 .content-container {
     display: flex;
     flex-direction: column;    
-    margin-right: 15vw;
-    margin-left: 15vw;
+    margin-right: 20vw;
+    margin-left: 20vw;
 }
 
 body{
     margin: 0;
     font-family: 'Raleway', sans-serif;
 
+}
+
+.portfolio-title{
+    text-align: center;
 }
 

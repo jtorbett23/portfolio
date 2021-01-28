@@ -4,6 +4,7 @@ import Portfolio from './Portfolio'
 import Intro from './Containers/Intro/Intro'
 import Articles from './Containers/Articles/Articles'
 import Projects from './Containers/Projects/Projects'
+import Info from './Containers/Info/Info'
 
 describe('Portfolio Tests', ()=>{
     let wrapper
@@ -17,6 +18,7 @@ describe('Portfolio Tests', ()=>{
         exp(wrapper.find(Intro)).to.have.length(1)  
         exp(wrapper.find(Projects)).to.have.length(1)
         exp(wrapper.find(Articles)).to.have.length(1)
+        exp(wrapper.find(Info)).to.have.length(1)
     })
    
 })
