@@ -12,7 +12,7 @@ export default function Portfolio() {
         
         <div className="content-container">
             <h1 className="portfolio-title">Portfolio</h1>
-            <Info />
+            <Info info={data.information} imagesPath="src/images/"/>
             <Intro text={data.introText.join('\n')} />
             <Projects projects={data.projects}/>
             <Articles articles={data.articles}/>

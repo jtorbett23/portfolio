@@ -1,4 +1,18 @@
 {
+    "information": {
+       
+            "name": "Joshua Torbett",
+            "location": "London, United Kingdom",
+            "profile_image": { 
+                "name": "Josh",
+                "alt": "Picture of Joshua Torbett"
+            },
+            "github_url": "https://github.com/jtorbett23/",
+            "linkedin_url": "https://www.linkedin.com/in/joshua-torbett-7a7b85a4/"
+
+    
+    },
+    
     "introText": [
         "Hello, I’m Josh and my interests are learning Japanese, bouldering and game development.",
         "These all share in my passion for solving challenging problems that require you to grow to overcome them.",
