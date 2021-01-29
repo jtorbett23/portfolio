@@ -10,12 +10,18 @@ export default function Portfolio() {
     return (
         <div className="site-container">
         
-        <div className="content-container">
+        <div className="page-container">
             <h1 className="portfolio-title">Portfolio</h1>
-            <Info info={data.information} imagesPath="src/images/"/>
-            <Intro text={data.introText.join('\n')} />
-            <Projects projects={data.projects}/>
-            <Articles articles={data.articles}/>
+            <div className="content-container">
+                <div className="sidebar">
+                    <Info info={data.information} imagesPath="src/images/"/>
+                </div>
+                <div className="main-section">
+                    <Intro text={data.introText.join('\n')} />
+                    <Projects projects={data.projects}/>
+                    <Articles articles={data.articles}/>
+                </div>
+            </div>
             </div>
         </div>
     )
