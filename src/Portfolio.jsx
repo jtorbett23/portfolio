@@ -11,7 +11,6 @@ export default function Portfolio() {
         <div className="site-container">
         
         <div className="page-container">
-            <h1 className="portfolio-title">Portfolio</h1>
             <div className="content-container">
                 <div className="sidebar">
                     <Info info={data.information} imagesPath="src/images/"/>

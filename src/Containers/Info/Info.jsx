@@ -5,7 +5,6 @@ export default function Info(props) {
 
     return (
         <div>
-            Information
             { props.info &&
             <>
             <img src={`${imagesPath}${props.info.profile_image.name}`} alt={props.info.profile_image.alt}/>
