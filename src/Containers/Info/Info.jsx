@@ -5,7 +5,7 @@ export default function Info(props) {
     const imagesPath = `${process.env.PUBLIC_URL}/images/`
 
     return (
-        <div>
+        <div className="info-container">
             { props.info &&
             <>
             <img id="profile-image" src={`${imagesPath}${props.info.profile_image.name}`} alt={props.info.profile_image.alt}/>

@@ -26,9 +26,11 @@
 body{
     margin: 0;
     font-family: 'Raleway', sans-serif;
+    
 }
 
 .sidebar {
+    display: flex;
     background-color: #36454F;
     height: 100vh;
     padding: 30px;
