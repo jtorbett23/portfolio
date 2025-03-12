@@ -9,6 +9,7 @@ const IndexPage: React.FC<PageProps> = () => {
     <main className={page}>
     <section className={section1}>
       Section 1
+      <AvatarCard/>
     </section>
     <section className={section2}>
       Section 2
