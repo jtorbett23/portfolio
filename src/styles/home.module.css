@@ -1,0 +1,22 @@
+.page {
+	color: red;
+	display: flex;
+	height: 100%;
+	margin: 10px;
+}
+
+.section1 {
+	width: 30%;
+	height: 100%;
+	background-color: palegreen;
+	display: flex;
+	flex-direction: column;
+}
+
+.section2 {
+	width: 70%;
+	height: 100%;
+	background-color: paleturquoise;
+	display: flex;
+	flex-direction: column;
+}
