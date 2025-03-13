@@ -1,0 +1,14 @@
+{
+	"information": [{
+		"title": "Based In", "content" : "London, England"
+	},
+	{
+		"title": "GitHub", "content" : "jtorbett23"
+	},
+	{
+		"title": "Email", "content" : "josh.torbett@outlook.com"
+	}
+],
+
+	"technologies": ["JavaScript", "TypeScript", "AWS", "Git", "Docker", "CSS", "SQL"]
+}

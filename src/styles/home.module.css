@@ -8,7 +8,6 @@
 .section1 {
 	width: 30%;
 	height: 100%;
-	background-color: palegreen;
 	display: flex;
 	flex-direction: column;
 }
