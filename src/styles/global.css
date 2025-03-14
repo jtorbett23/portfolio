@@ -4,6 +4,8 @@
  * html, body, #___gatsby &  
  * div with role="group"
 */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
 
 html, body, #___gatsby, #gatsby-focus-wrapper {
     height: 100%;
@@ -12,5 +14,6 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
 
 body {
     margin: 0px;
+    font-family: 'Raleway', sans-serif;
 }
 

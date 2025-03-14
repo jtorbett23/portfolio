@@ -7,6 +7,7 @@ import data from '../data.json'
 import TechStackCard from "../components/techstack-card"
 import ProjectsCard from "../components/projects-card"
 import ArticlesCard from "../components/articles-card"
+import IntroCard from "../components/intro-card"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -17,6 +18,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <TechStackCard techs={data.technologies}/>
     </section>
     <section className={section2}>
+      <IntroCard/>
       <ProjectsCard/>
       <ArticlesCard/>
     </section>
