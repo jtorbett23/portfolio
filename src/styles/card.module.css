@@ -1,18 +1,38 @@
 .card {
-	justify-content: center;
-	align-items: center;
 	background-color: #FAF7F5;
 	margin: 10px;
-	padding: 10px;
+	padding: 10px 15px;
 	display: flex;
 	flex-direction: column;
-	border-radius: 30px;
+	border-radius: 25px;
+}
+
+.centered {
+	align-items: center;
+	justify-content: center;
 }
 
 .infoText {
 	justify-content: space-between;
 	width: 90%;
 	display: flex;
+}
+
+.cardTitle {
+	justify-self: left;
+	align-self: left;
+}
+
+.techBubble {
+	margin: 5px;
+	padding: 5px;
+	background-color: #74C8CC;
+	border-radius: 10px;
+}
+
+.techContainer {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 
