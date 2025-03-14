@@ -5,18 +5,20 @@ import AvatarCard from "../components/avatar-card"
 import InfoCard from "../components/info-card"
 import data from '../data.json'
 import TechStackCard from "../components/techstack-card"
+import ProjectsCard from "../components/projects-card"
+import ArticlesCard from "../components/articles-card"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main className={page}>
     <section className={section1}>
-      Section 1
       <AvatarCard/>
       <InfoCard infos={data.information}/>
       <TechStackCard techs={data.technologies}/>
     </section>
     <section className={section2}>
-      Section 2
+      <ProjectsCard/>
+      <ArticlesCard/>
     </section>
     </main>
   )

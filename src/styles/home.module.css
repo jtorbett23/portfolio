@@ -1,5 +1,5 @@
 .page {
-	color: red;
+	color: black;
 	display: flex;
 	height: 100%;
 	margin: 10px;
@@ -15,7 +15,6 @@
 .section2 {
 	width: 70%;
 	height: 100%;
-	background-color: paleturquoise;
 	display: flex;
 	flex-direction: column;
 }
