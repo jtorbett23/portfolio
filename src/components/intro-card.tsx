@@ -4,16 +4,17 @@ import PropTypes, { InferProps } from "prop-types";
 
 
 const IntroCardPropTypes = {
+	intro: String
 };
 
 type IntroCardTypes = InferProps<typeof IntroCardPropTypes>;
 
 
-const IntroCard = ({} : IntroCardTypes ) => {
+const IntroCard = ({intro} : IntroCardTypes ) => {
   return (
 	<article className={card}>
 		<h2 className={cardHeading}>About Me</h2>
-		Hi I'm Josh
+		{intro}
 	</article>
   )
 }

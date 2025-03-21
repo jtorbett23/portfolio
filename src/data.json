@@ -10,5 +10,20 @@
 	}
 ],
 
-	"technologies": ["JavaScript", "TypeScript", "AWS", "Git", "Docker", "CSS", "SQL", "Python"]
+	"intro": "Hi I am Josh a London based Software Engineer with a keen interest in DevOps & Education",
+
+	"technologies": ["JavaScript", "TypeScript", "AWS", "Git", "Docker", "CSS", "SQL", "Python"],
+	
+	"projects": [
+		{
+			"title": "gitlab-pages-react-example",
+			"description": "This is a react app setup to be run easily with a Gitlab pipeline and be deployed to Gitlab pages.",
+			"url": "https://github.com/jtorbett23/gitlab-pages-react-example"
+		}
+	],
+
+	"articles": [{"title": "Deploying React to Gitlab Pages",
+				"description": "A tutorial for deploying a React App to Gitlab Pages",
+				"tags": ["React", "Gitlab", "CI/CD", "Static Site Hosting"],
+				"url": "https://dev.to/jtorbett23/react-gitlab-pages-42l6"}]
 }

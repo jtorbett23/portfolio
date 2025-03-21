@@ -18,9 +18,9 @@ const IndexPage: React.FC<PageProps> = () => {
       <TechStackCard techs={data.technologies}/>
     </section>
     <section className={section2}>
-      <IntroCard/>
-      <ProjectsCard/>
-      <ArticlesCard/>
+      <IntroCard intro={data.intro}/>
+      <ProjectsCard projects={data.projects}/>
+      <ArticlesCard articles={data.articles}/>
     </section>
     </main>
   )
