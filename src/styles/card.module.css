@@ -39,6 +39,7 @@
 }
 
 .centered {
+	display: flex;
 	align-items: center;
 	justify-content: center;
 }
@@ -47,6 +48,7 @@
 	justify-content: space-between;
 	width: 90%;
 	display: flex;
+	margin: 2px;
 }
 
 .cardTitle {
@@ -70,6 +72,10 @@
 .tagContainer {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.infoIcon {
+	padding-right: 5px;
 }
 
 
