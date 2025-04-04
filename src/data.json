@@ -1,14 +1,18 @@
 {
-	"information": [{
-		"title": "Based In", "content" : "London, England"
-	},
-	{
-		"title": "GitHub", "content" : "jtorbett23"
-	},
-	{
-		"title": "Email", "content" : "josh.torbett@outlook.com"
-	}
-],
+	"information": [
+		{
+		"title": "Based In",
+		"content" : "London, England"
+		},
+		{
+			"title": "GitHub",
+			"content" : "jtorbett23"
+		},
+		{
+			"title": "Email",
+			"content" : "josh.torbett@outlook.com"
+		}
+	],
 
 	"intro": "Hi I am Josh a London based Software Engineer with a keen interest in DevOps & Education",
 
@@ -17,13 +21,28 @@
 	"projects": [
 		{
 			"title": "gitlab-pages-react-example",
-			"description": "This is a react app setup to be run easily with a Gitlab pipeline and be deployed to Gitlab pages.",
+			"description": "Example of how to deploy a React App to Gitlab pages via Gitlab CI/CD.",
 			"url": "https://github.com/jtorbett23/gitlab-pages-react-example"
+		},
+		{
+			"title": "fastapi-render-tutorial",
+			"description": "Example of how to deploy a fastapi App to Render via Github Actions (CI/CD).",
+			"url": "https://github.com/jtorbett23/fastapi-render-tutorial"
 		}
 	],
 
-	"articles": [{"title": "Deploying React to Gitlab Pages",
-				"description": "A tutorial for deploying a React App to Gitlab Pages",
-				"tags": ["React", "Gitlab", "CI/CD", "Static Site Hosting"],
-				"url": "https://dev.to/jtorbett23/react-gitlab-pages-42l6"}]
+	"articles": [
+		{
+			"title": "Deploying React to Gitlab Pages",
+			"description": "A tutorial for ow to deploy a React App to Gitlab pages via Gitlab CI/CD.",
+			"tags": ["React", "Gitlab", "CI/CD", "Static Site Hosting"],
+			"url": "https://dev.to/jtorbett23/react-gitlab-pages-42l6"
+		},
+		{
+			"title": "Render & Github Actions",
+			"description": "A tutorial for how to deploy a fastapi App to Render via Github Actions (CI/CD).",
+			"tags": ["fastapi", "Github Actions", "CI/CD", "API Hosting"],
+			"url": "https://dev.to/jtorbett23/render-github-actions-2b92"
+		}
+	]
 }
