@@ -16,6 +16,13 @@
 	margin: 5px;
 }
 
+.avatarImage {
+	border-radius: 50%;
+	border-color: #74C8CC;
+	border-style: double;
+	border-width: 5px;
+}
+
 .cardContainerHeading {
 	margin: 5px;
 }
