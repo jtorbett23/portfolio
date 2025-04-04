@@ -17,7 +17,7 @@ const ProjectsCard = ({projects} : ProjectsCardTypes ) => {
 		{projects.map((project:Project)=> {
 			return <div className={card}>
 				<h3><a href={project.url} target="_blank" rel="noopener noreferrer">{project.title}</a></h3>
-				<p>{project.description}</p>
+				<span>{project.description}</span>
 			</div>
 		})}
 		

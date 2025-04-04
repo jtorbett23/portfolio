@@ -1,5 +1,5 @@
 import * as React from "react"
-import {card, cardContainer, cardContainerHeading, techBubble, techContainer} from "../styles/card.module.css"
+import {card, cardContainer, cardContainerHeading, techBubble, tagContainer} from "../styles/card.module.css"
 import PropTypes, { InferProps } from "prop-types";
 import { Article } from "../types";
 
@@ -17,8 +17,8 @@ const ArticlesCard = ({articles} : ArticlesCardTypes ) => {
 		{articles.map((article:Article)=> {
 			return <div className={card}>
 				<h3><a href={article.url} target="_blank" rel="noopener noreferrer">{article.title}</a></h3>
-				<p>{article.description}</p>
-				<div className={techContainer}>
+				<span>{article.description}</span>
+				<div className={tagContainer}>
 				{article.tags.map((tech : String)=> {
 					return <span className={techBubble}>{tech}</span>
 				})}
