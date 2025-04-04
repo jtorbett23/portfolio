@@ -1,8 +1,8 @@
 {
 	"information": [
 		{
-		"title": "Based In",
-		"content" : "London, England"
+			"title": "Based In",
+			"content" : "London, England"
 		},
 		{
 			"title": "GitHub",
@@ -14,7 +14,7 @@
 		}
 	],
 
-	"intro": "Hi I am Josh a London based Software Engineer with a keen interest in DevOps & Education",
+	"intro": "Hi I am Josh, a London based Software Engineer with a keen interest in DevOps & Education",
 
 	"technologies": ["JavaScript", "TypeScript", "AWS", "Git", "Docker", "CSS", "SQL", "Python"],
 	
@@ -34,7 +34,7 @@
 	"articles": [
 		{
 			"title": "Deploying React to Gitlab Pages",
-			"description": "A tutorial for ow to deploy a React App to Gitlab pages via Gitlab CI/CD.",
+			"description": "A tutorial for how to deploy a React App to Gitlab pages via Gitlab CI/CD.",
 			"tags": ["React", "Gitlab", "CI/CD", "Static Site Hosting"],
 			"url": "https://dev.to/jtorbett23/react-gitlab-pages-42l6"
 		},

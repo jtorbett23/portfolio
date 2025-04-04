@@ -1,14 +1,23 @@
 .cardContainer {
 	background-color: hsl(26, 18%, 92%);
 	border-radius: 25px;
-	margin: 10px;
-	padding: 10px 15px;
+	margin: 5px;
+	padding: 10px 10px;
 	filter: drop-shadow(0.5px 0.5px 0.5px);
 
 }
 
 .cardHeading {
-	
+	align-self: flex-start;
+	margin: 5px;
+}
+
+.avatarText {
+	margin: 5px;
+}
+
+.cardContainerHeading {
+	margin: 5px;
 }
 
 .card {
