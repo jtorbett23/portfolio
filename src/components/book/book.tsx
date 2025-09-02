@@ -1,10 +1,10 @@
 import React from "react"
-
+import {table} from "../../styles/book.module.css"
 
 const Book = () => {
   return (
-    <section>
-        Book Mode
+    <section className={table}>
+        <div>Book Mode</div>
     </section>
   )
 }
