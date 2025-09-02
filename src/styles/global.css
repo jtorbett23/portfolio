@@ -11,14 +11,17 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
     height: 100%;
 }
 
-body {
-    margin: 0px;
-    font-family: 'Raleway', sans-serif;
-}
-
-
 :root {
     --text-colour: #000;
+    --background-colour: #E7E2DF;
+    --primary-card-colour: #FAF7F5;
+    --secondary-card-colour: hsl(26, 18%, 92%);
+    --drop-shadow-card-colour: grey;
+    --accent-colour: #74C8CC;
+}
+
+[data-theme="light"]{
+	--text-colour: #000;
     --background-colour: #E7E2DF;
     --primary-card-colour: #FAF7F5;
     --secondary-card-colour: hsl(26, 18%, 92%);

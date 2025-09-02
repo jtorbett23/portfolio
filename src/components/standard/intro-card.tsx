@@ -1,5 +1,5 @@
 import React from "react"
-import {card, cardHeading} from "../styles/card.module.css"
+import {card, cardHeading} from "../../styles/card.module.css"
 
 
 type IntroCardProps = {

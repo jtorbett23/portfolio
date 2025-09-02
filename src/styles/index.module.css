@@ -1,0 +1,21 @@
+.index {
+	color: var(--text-colour);
+	background-color: var(--background-colour);
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 10px;
+	min-width: 400px;
+}
+
+.header {
+	display: flex;
+	padding-right: 10%;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Raleway', sans-serif;
+}
+
+

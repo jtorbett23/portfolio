@@ -1,24 +1,7 @@
-.page {
-	color: var(--text-colour);
-	background-color: var(--background-colour);
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	padding: 10px;
-	min-width: 400px;
-}
-
 .content {
 	display: flex;
 	padding-top: 20px;
 }
-
-.header {
-	display: flex;
-	justify-content: flex-end;
-	padding-right: 10%;
-}
-
 .section1 {
 	width: 35%;
 	height: 100%;
@@ -35,13 +18,7 @@
 	justify-content: center;
 }
 
-.header {
-	display: flex;
-}
 
-.themeLabel {
-	padding-right: 10px;
-}
 
 @media (max-width : 950px ) {
 	.section1{
@@ -52,7 +29,7 @@
 		width: 100%;
 	}
 
-	.page {
+	.content {
 		flex-direction: column;
 	}
 }
