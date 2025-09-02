@@ -10,3 +10,8 @@ export type Project = {
 	description: string,
 	url: string
 }
+
+export type Info = {
+	title: string,
+	content: string,
+}
