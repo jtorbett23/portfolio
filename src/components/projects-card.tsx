@@ -1,16 +1,12 @@
-import * as React from "react"
+import React from "react"
 import {card, cardContainer, cardContainerHeading} from "../styles/card.module.css"
-import PropTypes, { InferProps } from "prop-types";
 import { Project } from "../types";
 
-const ProjectsCardPropTypes = {
+type ProjectsCardProps = {
 	projects: Array<Project>
 };
 
-type ProjectsCardTypes = InferProps<typeof ProjectsCardPropTypes>;
-
-
-const ProjectsCard = ({projects} : ProjectsCardTypes ) => {
+const ProjectsCard = ({projects} : ProjectsCardProps ) => {
   return (
 	<article className={cardContainer}>
 		<h2 className={cardContainerHeading}>Projects</h2>
@@ -24,7 +20,4 @@ const ProjectsCard = ({projects} : ProjectsCardTypes ) => {
 	</article>
   )
 }
-
-ProjectsCard.propTypes = ProjectsCardPropTypes;
-
 export default ProjectsCard

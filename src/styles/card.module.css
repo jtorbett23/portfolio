@@ -1,9 +1,9 @@
 .cardContainer {
-	background-color: hsl(26, 18%, 92%);
+	background-color: var(--secondary-card-colour);
 	border-radius: 25px;
 	margin: 5px;
 	padding: 10px 10px;
-	filter: drop-shadow(grey 1px 1px 1px);
+	filter: drop-shadow(var(--drop-shadow-card-colour) 1px 1px 1px);
 
 }
 
@@ -18,7 +18,7 @@
 
 .avatarImage {
 	border-radius: 50%;
-	border-color: #74C8CC;
+	border-color: var(--accent-colour);
 	border-style: double;
 	border-width: 5px;
 }
@@ -28,13 +28,13 @@
 }
 
 .card {
-	background-color: #FAF7F5;
+	background-color: var(--primary-card-colour);
 	margin: 10px;
 	padding: 10px 15px;
 	display: flex;
 	flex-direction: column;
 	border-radius: 25px;
-	filter: drop-shadow(grey 0.5px 0.5px 0.5px);
+	filter: drop-shadow(var(--drop-shadow-card-colour) 0.5px 0.5px 0.5px);
 
 }
 
@@ -59,7 +59,7 @@
 .techBubble {
 	margin: 5px;
 	padding: 5px;
-	background-color: #74C8CC;
+	background-color: var(--accent-colour);
 	border-radius: 10px;
 }
 

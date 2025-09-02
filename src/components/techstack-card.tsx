@@ -1,16 +1,11 @@
-import * as React from "react"
+import React from "react"
 import {card, techBubble, techContainer, cardHeading} from "../styles/card.module.css"
-import PropTypes, { InferProps } from "prop-types";
 
+type TechStackCardProps = {
+	techs: Array<String>
+}
 
-const TechStackCardPropTypes = {
-	techs: PropTypes.instanceOf(Array<String>).isRequired
-};
-
-type TechStackCardTypes = InferProps<typeof TechStackCardPropTypes>;
-
-
-const TechStackCard = ({techs} : TechStackCardTypes ) => {
+const TechStackCard = ({techs} : TechStackCardProps ) => {
   return (
 	<article className={card}>
 		<h2 className={cardHeading}>Tech Stack</h2>
@@ -23,7 +18,5 @@ const TechStackCard = ({techs} : TechStackCardTypes ) => {
 	</article>
   )
 }
-
-TechStackCard.propTypes = TechStackCardPropTypes;
 
 export default TechStackCard
