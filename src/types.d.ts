@@ -1,8 +1,3 @@
-declare module "*.module.css"
-declare module "*.png"
-declare module "*.json"
-
-
 export type Article = {
 	title: string,
 	description: string,
