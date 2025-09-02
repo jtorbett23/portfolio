@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import headshot from '../assets/headshot.png'
 import {card, centered, avatarText, avatarImage} from "../styles/card.module.css"
 

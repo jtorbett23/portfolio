@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import {card, cardContainer, cardContainerHeading} from "../styles/card.module.css"
 import { Project } from "../types";
 

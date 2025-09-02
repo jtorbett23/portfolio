@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import {card, cardContainer, cardContainerHeading, techBubble, tagContainer} from "../styles/card.module.css"
 import { Article } from "../types";
 

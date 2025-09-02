@@ -9,7 +9,6 @@
 
 html, body, #___gatsby, #gatsby-focus-wrapper {
     height: 100%;
-	background-color: #E7E2DF;
 }
 
 body {
@@ -17,3 +16,21 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+
+:root {
+    --text-colour: #000;
+    --background-colour: #E7E2DF;
+    --primary-card-colour: #FAF7F5;
+    --secondary-card-colour: hsl(26, 18%, 92%);
+    --drop-shadow-card-colour: grey;
+    --accent-colour: #74C8CC;
+}
+
+[data-theme="dark"] {
+    --text-colour: #f6f6f6;
+    --background-colour: #0a0a0a;
+    --primary-card-colour: hsl(236, 95%, 46%);
+    --secondary-card-colour: #FAF7F5;
+    --drop-shadow-card-colour: grey;
+    --accent-colour: #74C8CC;
+}

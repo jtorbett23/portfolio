@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import {card, techBubble, techContainer, cardHeading} from "../styles/card.module.css"
 
 type TechStackCardProps = {

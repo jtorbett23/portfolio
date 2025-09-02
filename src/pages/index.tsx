@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import {page, section1, section2} from "../styles/home.module.css"
 import AvatarCard from "../components/avatar-card"
@@ -7,11 +7,11 @@ import data from '../data.json'
 import TechStackCard from "../components/techstack-card"
 import ProjectsCard from "../components/projects-card"
 import ArticlesCard from "../components/articles-card"
-import IntroCard from "../components/intro-card"
+// import IntroCard from "../components/intro-card"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <main className={page}>
+    <main className={page} data-theme="light">
     <section className={section1}>
       <AvatarCard/>
       <InfoCard infos={data.information}/>

@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import {card, infoText, centered, infoIcon} from "../styles/card.module.css"
 import { Info } from "../types";
 

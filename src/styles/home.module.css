@@ -1,8 +1,9 @@
 .page {
-	color: black;
+	color: var(--text-colour);
+	background-color: var(--background-colour);
 	display: flex;
 	height: 100%;
-	margin: 10px;
+	padding: 10px;
 	min-width: 400px;
 }
 
