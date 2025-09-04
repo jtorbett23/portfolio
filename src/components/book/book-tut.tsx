@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import {bookContainer, book, paper, front, flipped, back, frontContent, backContent, p1, p2, p3} from "../../styles/book-tut.module.css"
-
+// https://www.youtube.com/watch?v=0kD6ff2J3BQ
 const BookTut = () => {
     const [currentLocation, setLocation] = useState(1)
     const numberOfPages = 3;
