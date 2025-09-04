@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import {bookContainer, book, paper, front, flipped, back, frontContent, backContent, p1, p2, p3} from "../../styles/book-tut.module.css"
+import {bookContainer, book, paper, front, flipped, back, frontContent, backContent, p1, p2, p3, rightPageTrigger, leftPageTrigger} from "../../styles/book-tut.module.css"
 // https://www.youtube.com/watch?v=0kD6ff2J3BQ
 const BookTut = () => {
     const [currentLocation, setLocation] = useState(1)
@@ -29,6 +29,8 @@ const BookTut = () => {
         
         <div id="book" className={book}
         style={{transform: getBookTransform()}}>
+            {currentLocation !== maxLocation ? <div className={rightPageTrigger} onClick={goNextPage}>Right</div> : null}
+            {currentLocation !== minLocation ? <div className={leftPageTrigger} onClick={goPreviousPage}>Left</div> : null}
             <div id={p1} className={`${paper} ${currentLocation >= 2 ? flipped : null}`}
                 style={{zIndex: currentLocation >= 2 ? 1 : 3}}>
                 <div className={front}>
@@ -69,13 +71,6 @@ const BookTut = () => {
                 </div>
             </div>
         </div>
-        <button onClick={goPreviousPage}>
-            Prev
-        </button>
-        <button onClick={goNextPage}>
-            Next
-        </button>
-        <h1>{currentLocation}</h1>
         </div>
     )
 }
