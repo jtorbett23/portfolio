@@ -2,6 +2,7 @@ import React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import Standard from "../components/standard/standard";
 import Book from "../components/book/book";
+import BookTut from "../components/book/book-tut";
 import ThemeSelector from "../components/theme-selector";
 import {index, header} from "../styles/index.module.css"
 import useLocalStorage from "use-local-storage";
@@ -15,7 +16,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <ThemeSelector defaultTheme={theme} handleChange={
           (e: React.ChangeEvent<HTMLInputElement>) => setTheme(e.target.value)} />
       </header>
-      {theme.includes("book") ? <Book/> : <Standard/>}
+      {theme.includes("book") ? <BookTut/> : <Standard/>}
     </div>
   )
 }

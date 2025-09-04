@@ -19,7 +19,7 @@ const Book = () => {
       <div className={bookContainer}>
         <div className={sleeve}>
           {pageNumber !== minPage ? <div className={leftPageTrigger} onClick={decreasePageNumber}>Left</div> : null}
-          {pageNumber !== maxPage ? <div className={rightPageTrigger} onClick={increasePageNumber}>Left</div> : null}
+          <div className={rightPageTrigger} onClick={increasePageNumber}>Right</div>
           {pageNumber === 1 ? <div className={pageLeft}>Page 1</div> : null}
           {pageNumber === 1 ? <div className={pageRight}>Page 2</div> : null}
           {pageNumber === 3 ? <div className={pageLeft}>Page 3</div> : null}
