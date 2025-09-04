@@ -14,12 +14,53 @@
     display: flex;
 }
 
-.page {
-    background-color: whitesmoke;
+.pageRight {
+    background-color: hsl(0, 0%, 96%);
     height: 100%;
     width: 50%;
     border-radius: 10px;
+    position: relative;
 }
+
+.pageLeft {
+    background-color: hsl(0, 0%, 96%);
+    height: 100%;
+    width: 50%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.rightPageTrigger:hover ~ .pageRight:after{
+content: '';
+width: 2.13em;
+height: 2.15em;
+position: absolute;
+top: 0px;
+right: 0px;
+background: linear-gradient(-135deg, transparent 1.5em, grey 0) no-repeat;
+border-bottom-left-radius: 10px;
+background-repeat: no-repeat;
+}
+
+.rightPageTrigger:hover ~ .pageRight {
+    background: linear-gradient(-135deg, transparent 1.5em, hsl(0, 0%, 96%) 0);
+}
+
+.leftPageTrigger:hover ~ .pageLeft:before{
+content: '';
+width: 2.13em;
+height: 2.15em;
+position: absolute;
+background: linear-gradient(-225deg, transparent 1.5em, grey 0) no-repeat;
+border-bottom-right-radius: 10px;
+background-repeat: no-repeat;
+}
+
+.leftPageTrigger:hover ~ .pageLeft {
+    background: linear-gradient(-225deg, transparent 1.5em, hsl(0, 0%, 96%) 0);
+}
+
+
 
 .bookContainer {
     display: flex;
@@ -35,7 +76,11 @@
     position: absolute;
     z-index: 500;
     height: calc(100% - 20px);
-    opacity: 0.5;
+    opacity: 0.0;
+}
+
+.leftPageTrigger:hover {
+    background-color: blue;
 }
 
 .rightPageTrigger{
@@ -46,4 +91,9 @@
     z-index: 500;
     left: calc(100% - 10px - 10%); 
     height: calc(100% - 20px);
+    opacity: 0.0;
+}
+
+.rightPageTrigger:hover {
+    background-color: blue;
 }
