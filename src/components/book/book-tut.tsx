@@ -1,20 +1,23 @@
 import React, {useState} from "react"
-import {bookContainer, book, paper, front, flipped, back, frontContent, backContent, p1, p2, p3, rightPageTrigger, leftPageTrigger} from "../../styles/book-tut.module.css"
+import {bookContainer, book, paper, front, flipped, back, frontContent, backContent, p1, p2, p3, p4, rightPageTrigger, leftPageTrigger, backCover} from "../../styles/book-tut.module.css"
 // https://www.youtube.com/watch?v=0kD6ff2J3BQ
 const BookTut = () => {
     const [currentLocation, setLocation] = useState(1)
-    const numberOfPages = 3;
+    const [flipDirection, setFlipDirection] = useState(1)
+    const numberOfPages = 4;
     const minLocation = 1
     const maxLocation = numberOfPages + 1;
     
     const goNextPage = () => {
         if(currentLocation < maxLocation)
             setLocation(currentLocation + 1)
+            setFlipDirection(1)
     }
 
     const goPreviousPage = () => {
         if(currentLocation > minLocation)
             setLocation(currentLocation - 1)
+            setFlipDirection(-1)
     }
 
     const getBookTransform = () => {
@@ -24,7 +27,45 @@ const BookTut = () => {
             return 'translateX(0%)'
     }
 
+    const getPaperZindex = (paperIndex:number) => {
+
+        if(paperIndex === 1)
+        {
+            if(currentLocation > 2 && flipDirection === 1)
+                return 1
+            else if (currentLocation >= 2 && flipDirection === -1)
+                return 1
+            return 3
+        }
+        else if (paperIndex === 2)
+        {
+            if(currentLocation > 3 && flipDirection === 1)
+                return 2
+            else if (currentLocation >= 3 && flipDirection === -1)
+                return 2
+            return 2
+        }
+        else if (paperIndex === 3)
+        {
+            if(currentLocation > 3 && flipDirection === 1)
+                return 3
+            if(currentLocation >= 3 && flipDirection === -1)
+                return 3
+            return 1
+        }
+        else if (paperIndex === 4)
+        {
+            if(currentLocation > 4 && flipDirection === 1)
+                return 3
+            if(currentLocation >= 4 && flipDirection === -1)
+                return 3
+            return 0
+        }
+    }
+
     return (
+        <>
+        <h1>{currentLocation}: {flipDirection}</h1>
         <div className={bookContainer}>
         
         <div id="book" className={book}
@@ -32,9 +73,9 @@ const BookTut = () => {
             {currentLocation !== maxLocation ? <div className={rightPageTrigger} onClick={goNextPage}>Right</div> : null}
             {currentLocation !== minLocation ? <div className={leftPageTrigger} onClick={goPreviousPage}>Left</div> : null}
             <div id={p1} className={`${paper} ${currentLocation >= 2 ? flipped : null}`}
-                style={{zIndex: currentLocation >= 2 ? 1 : 3}}>
+                style={{zIndex: getPaperZindex(1)}}>
                 <div className={front}>
-                    <div id="f1" className={frontContent}>
+                    <div id="f1" className={frontContent} style={{backgroundColor:"black"}}>
                         <h1>Front 1</h1>
                     </div>
                 </div>
@@ -45,7 +86,7 @@ const BookTut = () => {
                 </div>
             </div>
             <div id={p2} className={`${paper} ${currentLocation >= 3 ? flipped : null}`}
-            style={{zIndex: currentLocation >= 3 ? 2 : 2}}>
+            style={{zIndex: getPaperZindex(2)}}>
                 <div className={front}>
                     <div id="f2" className={frontContent}>
                         <h1>Front 2</h1>
@@ -57,8 +98,8 @@ const BookTut = () => {
                     </div>
                 </div>
             </div>
-                    <div id={p3} className={`${paper} ${currentLocation >= 4 ? flipped : null}`}
-                        style={{zIndex: currentLocation >= 4 ? 3 : 1}}>
+            <div id={p3} className={`${paper} ${currentLocation >= 4 ? flipped : null}`}
+            style={{zIndex: getPaperZindex(3)}}>
                 <div className={front}>
                     <div id="f3" className={frontContent}>
                         <h1>Front 3</h1>
@@ -70,8 +111,22 @@ const BookTut = () => {
                     </div>
                 </div>
             </div>
+                    <div id={p4} className={`${paper} ${currentLocation >= 5 ? flipped : null}`}
+                        style={{zIndex: getPaperZindex(4)}}>
+                <div className={front}>
+                    <div id="f4" className={frontContent}>
+                        <h1>Front 4</h1>
+                    </div>
+                </div>
+                <div className={back}>
+                    <div id="b4" className={backCover} style={{backgroundColor:"black"}}>
+                        <h1>Back 4</h1>
+                    </div>
+                </div>
+            </div>
         </div>
         </div>
+        </>
     )
 }
 
