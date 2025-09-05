@@ -51,6 +51,34 @@ const BookTut = () => {
 
     }
 
+    const delay = (ms:number) => new Promise(res => setTimeout(res, ms));
+
+    const goToPage = async (page:number) => {
+        if(currentLocation === page)
+            return
+        const pagesToMove = Math.abs(currentLocation - page)
+        if(page > currentLocation)
+        {
+            setFlipDirection(1)
+            for (let i = 0; i < pagesToMove; i++)
+            {
+                await delay(200)
+                setLocation((prevState) => (prevState + 1));
+
+            }
+        }
+        else
+        {
+            setFlipDirection(-1)
+            for (let i = 0; i < pagesToMove; i++)
+            {
+                await delay(200)
+                setLocation((prevState) => (prevState - 1));
+
+            }
+        }
+    }
+
     return (
         <>
         <h1>{currentLocation}: {flipDirection}</h1>
