@@ -35,32 +35,20 @@ const BookTut = () => {
                 return 1
             else if (currentLocation >= 2 && flipDirection === -1)
                 return 1
-            return 3
+            return numberOfPages
         }
-        else if (paperIndex === 2)
-        {
-            if(currentLocation > 3 && flipDirection === 1)
-                return 2
-            else if (currentLocation >= 3 && flipDirection === -1)
-                return 2
+        else if(paperIndex === 2)
             return 2
-        }
-        else if (paperIndex === 3)
+        else
         {
-            if(currentLocation > 3 && flipDirection === 1)
-                return 3
-            if(currentLocation >= 3 && flipDirection === -1)
-                return 3
-            return 1
+            if(currentLocation > paperIndex && flipDirection === 1)
+                return numberOfPages
+            else if (currentLocation >= paperIndex && flipDirection === -1)
+                return numberOfPages
+            
+            return numberOfPages - paperIndex
         }
-        else if (paperIndex === 4)
-        {
-            if(currentLocation > 4 && flipDirection === 1)
-                return 3
-            if(currentLocation >= 4 && flipDirection === -1)
-                return 3
-            return 0
-        }
+
     }
 
     return (
