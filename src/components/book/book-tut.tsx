@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import {bookContainer, book, paper, front, flipped, back, frontContent, backContent, p1, p2, p3, p4, rightPageTrigger, leftPageTrigger, backCover} from "../../styles/book-tut.module.css"
+import {bookContainer, book, paper, front, flipped, back, frontContent, backContent, p1, p2, p3, p4, rightPageTrigger, leftPageTrigger, backCover, tag, tagBack} from "../../styles/book-tut.module.css"
 // https://www.youtube.com/watch?v=0kD6ff2J3BQ
 const BookTut = () => {
     const [currentLocation, setLocation] = useState(1)
@@ -51,6 +51,16 @@ const BookTut = () => {
 
     }
 
+    const getTagZindex = (paperIndex:number) => {
+
+        if (currentLocation !== paperIndex)
+        {
+            return 1
+        }
+        return paperIndex
+
+    }
+
     const delay = (ms:number) => new Promise(res => setTimeout(res, ms));
 
     const goToPage = async (page:number) => {
@@ -90,7 +100,7 @@ const BookTut = () => {
             {currentLocation !== minLocation ? <div className={leftPageTrigger} onClick={goPreviousPage}>Left</div> : null}
             <div id={p1} className={`${paper} ${currentLocation >= 2 ? flipped : null}`}
                 style={{zIndex: getPaperZindex(1)}}>
-                <div className={front}>
+                <div className={`${front}`}>
                     <div id="f1" className={frontContent} style={{backgroundColor:"black"}}>
                         <h1>Front 1</h1>
                     </div>
@@ -104,11 +114,13 @@ const BookTut = () => {
             <div id={p2} className={`${paper} ${currentLocation >= 3 ? flipped : null}`}
             style={{zIndex: getPaperZindex(2)}}>
                 <div className={front}>
+                    <div className={tag}  onMouseDown={() => goToPage(2)}style={{zIndex: getTagZindex(2)}}></div>
                     <div id="f2" className={frontContent}>
                         <h1>Front 2</h1>
                     </div>
                 </div>
                 <div className={back}>
+                    <div className={tagBack} onMouseDown={() => goToPage(2)}></div>
                     <div id="b2" className={backContent}>
                         <h1>Back 2</h1>
                     </div>
