@@ -5,12 +5,14 @@ const BookTut = () => {
     const [currentLocation, setLocation] = useState(1)
     const [flipDirection, setFlipDirection] = useState(1)
     const content = [
-        {front: "Front 1", back: "Back 1", has_tag: false}, 
+        {front: "Front 1", back: "Back 1", has_tag: true}, 
         {front: "Front 2", back: "Back 2", has_tag: true},
         {front: "Front 3", back: "Back 3", has_tag: false},
-        {front: "Front 4", back: "Back 4", has_tag: false}
+        {front: "Front 4", back: "Back 4", has_tag: true}
     ]
 
+    const tagColours = ["red", "orange", "blue"]
+    let tagIndex = -1
     const numberOfPages = content.length + 2;
     const minLocation = 1
     const maxLocation = numberOfPages + 1;
@@ -95,7 +97,7 @@ const BookTut = () => {
             <div className={`${paper} ${currentLocation >= 2 ? flipped : null}`}
                 style={{zIndex: getPaperZindex(1)}}>
                 <div className={`${front}`}>
-                    <div  className={frontContent} style={{backgroundColor:"black"}}>
+                    <div  className={frontContent} style={{backgroundColor:"black", borderLeft:"1px solid black"}}>
                         <h1>Front 1</h1>
                     </div>
                 </div>
@@ -106,16 +108,18 @@ const BookTut = () => {
                 </div>
             </div>
             {content.map((page, index)=>{
+                if(page.has_tag)
+                    tagIndex++
                 return <div className={`${paper} ${currentLocation >= index + 3 ? flipped : null}`}
             style={{zIndex: getPaperZindex(index+ 2)}}>
                 <div className={front}>
-                    {page.has_tag ?<div className={tag}  onMouseDown={() => goToPage(index + 2)}></div> : null}
+                    {page.has_tag ?<div className={tag}  onMouseDown={() => goToPage(index + 2)} style={{backgroundColor: tagColours[tagIndex], marginLeft: `${(tagIndex + 1) * 6}%`}}></div> : null}
                     <div className={frontContent}>
                         <h1>{page.front}</h1>
                     </div>
                 </div>
                 <div className={back}>
-                    {page.has_tag ?<div className={tagBack}  onMouseDown={() => goToPage(index + 2)}></div> : null}
+                    {page.has_tag ?<div className={tagBack}  onMouseDown={() => goToPage(index + 2)} style={{backgroundColor: tagColours[tagIndex], marginLeft: `${(tagIndex + 1) * 6}%`}}></div> : null}
                     <div className={backContent}>
                         <h1>{page.back}</h1>
                     </div>
