@@ -140,20 +140,3 @@ left: -100%;
 .flipped .back {
     transform: rotateY(-180deg);
 }
-
-
-#p1 {
-    z-index: 3
-}
-
-#p2 {
-    z-index: 2
-}
-
-#p3 {
-    z-index: 1
-}
-
-#p4 {
-    z-index: 0
-}

@@ -4,10 +4,16 @@ import {bookContainer, book, paper, front, flipped, back, frontContent, backCont
 const BookTut = () => {
     const [currentLocation, setLocation] = useState(1)
     const [flipDirection, setFlipDirection] = useState(1)
-    const numberOfPages = 4;
+    const content = [
+        {front: "Front 1", back: "Back 1", has_tag: false}, 
+        {front: "Front 2", back: "Back 2", has_tag: true},
+        {front: "Front 3", back: "Back 3", has_tag: false},
+        {front: "Front 4", back: "Back 4", has_tag: false}
+    ]
+
+    const numberOfPages = content.length + 2;
     const minLocation = 1
     const maxLocation = numberOfPages + 1;
-    
     const goNextPage = () => {
         if(currentLocation < maxLocation)
             setLocation(currentLocation + 1)
@@ -37,8 +43,6 @@ const BookTut = () => {
                 return 1
             return numberOfPages
         }
-        else if(paperIndex === 2)
-            return 2
         else
         {
             if(currentLocation > paperIndex && flipDirection === 1)
@@ -84,60 +88,49 @@ const BookTut = () => {
         <h1>{currentLocation}: {flipDirection}</h1>
         <div className={bookContainer}>
         
-        <div id="book" className={book}
+        <div className={book}
         style={{transform: getBookTransform()}}>
             {currentLocation !== maxLocation ? <div className={rightPageTrigger} onClick={goNextPage}>Right</div> : null}
             {currentLocation !== minLocation ? <div className={leftPageTrigger} onClick={goPreviousPage}>Left</div> : null}
-            <div id={p1} className={`${paper} ${currentLocation >= 2 ? flipped : null}`}
+            <div className={`${paper} ${currentLocation >= 2 ? flipped : null}`}
                 style={{zIndex: getPaperZindex(1)}}>
                 <div className={`${front}`}>
-                    <div id="f1" className={frontContent} style={{backgroundColor:"black"}}>
+                    <div  className={frontContent} style={{backgroundColor:"black"}}>
                         <h1>Front 1</h1>
                     </div>
                 </div>
                 <div className={back}>
-                    <div id="b1" className={backContent} style={{backgroundColor:"black"}}>
+                    <div  className={backContent} style={{backgroundColor:"black"}}>
                         <h1>Back 1</h1>
                     </div>
                 </div>
             </div>
-            <div id={p2} className={`${paper} ${currentLocation >= 3 ? flipped : null}`}
-            style={{zIndex: getPaperZindex(2)}}>
+            {content.map((page, index)=>{
+                return <div className={`${paper} ${currentLocation >= index + 3 ? flipped : null}`}
+            style={{zIndex: getPaperZindex(index+ 2)}}>
                 <div className={front}>
-                    <div className={tag}  onMouseDown={() => goToPage(2)}></div>
-                    <div id="f2" className={frontContent}>
-                        <h1>Front 2</h1>
+                    {page.has_tag ?<div className={tag}  onMouseDown={() => goToPage(index + 2)}></div> : null}
+                    <div className={frontContent}>
+                        <h1>{page.front}</h1>
                     </div>
                 </div>
                 <div className={back}>
-                    <div className={tagBack} onMouseDown={() => goToPage(2)}></div>
-                    <div id="b2" className={backContent}>
-                        <h1>Back 2</h1>
+                    {page.has_tag ?<div className={tagBack}  onMouseDown={() => goToPage(index + 2)}></div> : null}
+                    <div className={backContent}>
+                        <h1>{page.back}</h1>
                     </div>
                 </div>
             </div>
-            <div id={p3} className={`${paper} ${currentLocation >= 4 ? flipped : null}`}
-            style={{zIndex: getPaperZindex(3)}}>
+            })}
+                    <div className={`${paper} ${currentLocation >= content.length + 3 ? flipped : null}`}
+                        style={{zIndex: getPaperZindex(content.length+ 2)}}>
                 <div className={front}>
-                    <div id="f3" className={frontContent}>
-                        <h1>Front 3</h1>
-                    </div>
-                </div>
-                <div className={back}>
-                    <div id="b3" className={backContent}>
-                        <h1>Back 3</h1>
-                    </div>
-                </div>
-            </div>
-                    <div id={p4} className={`${paper} ${currentLocation >= 5 ? flipped : null}`}
-                        style={{zIndex: getPaperZindex(4)}}>
-                <div className={front}>
-                    <div id="f4" className={frontContent} style={{backgroundColor:"black"}}>
+                    <div  className={frontContent} style={{backgroundColor:"black"}}>
                         <h1>Front 4</h1>
                     </div>
                 </div>
                 <div className={back}>
-                    <div id="b4" className={backCover} style={{backgroundColor:"black"}}>
+                    <div  className={backCover} style={{backgroundColor:"black"}}>
                         <h1>Back 4</h1>
                     </div>
                 </div>
