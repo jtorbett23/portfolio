@@ -96,7 +96,7 @@ const BookTut = () => {
                     </div>
                 </div>
                 <div className={back}>
-                    <div id="b1" className={backContent}>
+                    <div id="b1" className={backContent} style={{backgroundColor:"black"}}>
                         <h1>Back 1</h1>
                     </div>
                 </div>
@@ -132,7 +132,7 @@ const BookTut = () => {
                     <div id={p4} className={`${paper} ${currentLocation >= 5 ? flipped : null}`}
                         style={{zIndex: getPaperZindex(4)}}>
                 <div className={front}>
-                    <div id="f4" className={frontContent}>
+                    <div id="f4" className={frontContent} style={{backgroundColor:"black"}}>
                         <h1>Front 4</h1>
                     </div>
                 </div>
