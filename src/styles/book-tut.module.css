@@ -70,8 +70,7 @@
 }
 
 .rightPageTrigger{
-    background-color: white;
-    min-width: 10%;
+    min-width: 15%;
     min-height: 100px;
     position: absolute;
     z-index: 500;
@@ -81,14 +80,26 @@
 }
 
 
+.leftPageTrigger{
+    min-width: 15%;
+    min-height: 100px;
+    left: -100%;
+    position: absolute;
+    z-index: 500;
+    height: calc(100% - 20px);
+    opacity: 0.0;
+}
+
+
 .rightPageTrigger:hover ~ .paper > .pageCornerForward:after{
 box-sizing: border-box;
 content: '';
-padding:5%;
+padding:2%;
 position: absolute;
 top: 0px;
 right: 0px;
-background: linear-gradient(-135deg, black 50%, grey 0) no-repeat;
+background: linear-gradient(-135deg, black 50%, whitesmoke 0) no-repeat;
+border: 1px solid black;
 border-bottom-left-radius: 10px;
 background-repeat: no-repeat;
 z-index: 10;
@@ -97,28 +108,18 @@ z-index: 10;
 .leftPageTrigger:hover ~ .paper > .pageCornerBackward:before{
 box-sizing: border-box;
 content: '';
-padding:5%;
+padding:2%;
 position: absolute;
 top: 0px;
 right: -1px;
-background: linear-gradient(-135deg, black 50%, grey 0) no-repeat;
+background: linear-gradient(-135deg, black 50%, whitesmoke 0) no-repeat;
+border: 1px solid black;
 border-bottom-left-radius: 10px;
 background-repeat: no-repeat;
 z-index: 10;
 
 }
 
-.leftPageTrigger{
-    background-color: white;
-    min-width: 10%;
-    min-height: 100px;
-    left: -100%;
-    position: absolute;
-    z-index: 500;
-    height: calc(100% - 20px);
-    opacity: 0.0;
-    
-}
 
 
 .front, .frontCover {
