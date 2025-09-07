@@ -123,7 +123,7 @@ const BookTut = () => {
                     <div className={`${paper} ${currentLocation >= content.length + 3 ? flipped : null}`}
                         style={{zIndex: getPaperZindex(content.length+ 2)}}>
                 <div className={frontCover}>
-                    <div  className={frontContent}>
+                    <div  className={frontContent} >
                         <h1>Back Cover</h1>
                     </div>
                 </div>
