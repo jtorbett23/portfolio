@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import {bookContainer, book, paper, front, flipped, back, frontContent, backContent, frontCover, backCover, rightPageTrigger, leftPageTrigger, tag, tagBack, pageCornerBackward, pageCornerForward} from "../../styles/book-tut.module.css"
+import {bookContainer, book, paper, front, flipped, back, frontContent, backContent, frontCover, backCover, frontFrontCover, backFrontCover, rightPageTrigger, leftPageTrigger, tag, tagBack, pageCornerBackward, pageCornerForward} from "../../styles/book-tut.module.css"
 // https://www.youtube.com/watch?v=0kD6ff2J3BQ
 const BookTut = () => {
     const [currentLocation, setLocation] = useState(1)
@@ -96,15 +96,9 @@ const BookTut = () => {
             {currentLocation !== minLocation ? <div className={leftPageTrigger} onClick={goPreviousPage}>Left</div> : null}
             <div className={`${paper} ${currentLocation >= 2 ? flipped : null}`}
                 style={{zIndex: getPaperZindex(1)}}>
-                <div className={`${frontCover}`}>
-                    <div  className={frontContent}>
-                        <h1>Front Cover</h1>
-                    </div>
+                <div className={`${frontCover} ${currentLocation === 1 ? frontFrontCover: null} ${currentLocation === 2 ? backFrontCover: null}`}>
                 </div>
-                <div className={backCover}>
-                    <div  className={backContent}>
-                        <h1>Front Cover Back</h1>
-                    </div>
+                <div className={`${backCover} ${currentLocation === 1 ? frontFrontCover: null} ${currentLocation === 2 ? backFrontCover: null}`}>
                 </div>
             </div>
             {content.map((page, index)=>{

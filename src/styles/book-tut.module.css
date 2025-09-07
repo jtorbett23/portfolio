@@ -52,9 +52,10 @@
 }
 
 .frontCover {
-    left: -2.5%;
-
+    left: -1.25%;
 }
+
+
 
 
 .front, .back {
@@ -120,6 +121,29 @@ z-index: 10;
 
 }
 
+.leftPageTrigger:hover ~ .paper > .backFrontCover {
+    transform: rotateY(-170deg);
+}
+
+
+.rightPageTrigger:hover ~ .paper >  .frontFrontCover {
+    transform: rotateY(-20deg);
+}
+
+.rightPageTrigger:hover ~ .paper >  .frontFrontCover:after {
+    box-sizing: border-box;
+    content: '';
+    background-color: white;
+    position: absolute;
+    height: 90%;
+    width: 1.5%;
+    top: 5%;
+    right: -2%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
 
 
 .front, .frontCover {
@@ -149,6 +173,6 @@ z-index: 10;
 .flipped .back,
 .flipped .frontCover,
 .flipped .backCover
-  {
+{
     transform: rotateY(-180deg);
 }
