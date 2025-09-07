@@ -6,6 +6,10 @@
     background-color: powderblue;
 }
 
+.tag:hover, .tagBack:hover, .leftPageTrigger:hover, .rightPageTrigger:hover {
+    cursor: pointer;
+}
+
 .tag, .tagBack
 {
     width: 4%;

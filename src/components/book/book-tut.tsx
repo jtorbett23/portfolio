@@ -15,7 +15,7 @@ const BookTut = () => {
     let tagIndex = -1
     const numberOfPages = content.length + 2;
     const minLocation = 1
-    const maxLocation = numberOfPages + 1;
+    const maxLocation = numberOfPages; // add +1 for back cover
     const goNextPage = () => {
         if(currentLocation < maxLocation)
             setLocation(currentLocation + 1)
@@ -102,7 +102,7 @@ const BookTut = () => {
                     </div>
                 </div>
                 <div className={back}>
-                    <div  className={backContent} style={{backgroundColor:"black"}}>
+                    <div  className={backContent} style={{backgroundColor:"black",  borderLeft:"1px solid black"}}>
                         <h1>Back 1</h1>
                     </div>
                 </div>
