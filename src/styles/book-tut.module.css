@@ -51,9 +51,6 @@
     border-radius: 10px;
 }
 
-.frontCover {
-    left: -1.25%;
-}
 
 
 
@@ -93,7 +90,7 @@
 
 /* folded corners */
 
-.rightPageTrigger:hover ~ .paper > .pageCornerForward:after{
+/* .rightPageTrigger:hover ~ .paper > .pageCornerForward:after{
 box-sizing: border-box;
 content: '';
 padding:2%;
@@ -119,17 +116,16 @@ border: 1px solid black;
 border-bottom-left-radius: 10px;
 background-repeat: no-repeat;
 z-index: 10;
-}
+} */
 
 
-/* Need to apply to page after page after and before for cleaner effect  */
-/* .rightPageTrigger:hover ~ .paper > .pageCornerForward {
+.rightPageTrigger:hover ~ .paper > .pageCornerForward {
     transform: rotateY(-10deg);
 }
 
 .leftPageTrigger:hover ~ .paper > .pageCornerBackward{
     transform: rotateY(-170deg);
-} */
+}
 
 
 
