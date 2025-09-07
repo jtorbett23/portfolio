@@ -80,7 +80,8 @@
     opacity: 0.0;
 }
 
-.rightPageTrigger:hover ~ .paper > .front:after{
+
+.rightPageTrigger:hover ~ .paper > .pageCornerForward:after{
 box-sizing: border-box;
 content: '';
 padding:5%;
@@ -93,7 +94,7 @@ background-repeat: no-repeat;
 z-index: 10;
 }
 
-.leftPageTrigger:hover ~ .paper > .back:before{
+.leftPageTrigger:hover ~ .paper > .pageCornerBackward:before{
 box-sizing: border-box;
 content: '';
 padding:5%;

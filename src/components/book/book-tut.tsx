@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import {bookContainer, book, paper, front, flipped, back, frontContent, backContent, frontCover, backCover, rightPageTrigger, leftPageTrigger, tag, tagBack} from "../../styles/book-tut.module.css"
+import {bookContainer, book, paper, front, flipped, back, frontContent, backContent, frontCover, backCover, rightPageTrigger, leftPageTrigger, tag, tagBack, pageCornerBackward, pageCornerForward} from "../../styles/book-tut.module.css"
 // https://www.youtube.com/watch?v=0kD6ff2J3BQ
 const BookTut = () => {
     const [currentLocation, setLocation] = useState(1)
@@ -112,13 +112,13 @@ const BookTut = () => {
                     tagIndex++
                 return <div className={`${paper} ${currentLocation >= index + 3 ? flipped : null}`}
             style={{zIndex: getPaperZindex(index+ 2)}}>
-                <div className={front}>
+                <div className={`${front} ${currentLocation === index + 2 ? pageCornerForward : null }`}>
                     {page.has_tag ?<div className={tag}  onMouseDown={() => goToPage(index + 2)} style={{backgroundColor: tagColours[tagIndex], marginLeft: `${(tagIndex + 1) * 6}%`}}></div> : null}
                     <div className={frontContent}>
                         <h1>{page.front}</h1>
                     </div>
                 </div>
-                <div className={back}>
+                <div className={`${back} ${currentLocation === index + 3 ? pageCornerBackward : null }`}>
                     {page.has_tag ?<div className={tagBack}  onMouseDown={() => goToPage(index + 2)} style={{backgroundColor: tagColours[tagIndex], marginLeft: `${(tagIndex + 1) * 6}%`}}></div> : null}
                     <div className={backContent}>
                         <h1>{page.back}</h1>
