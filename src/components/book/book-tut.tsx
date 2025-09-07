@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import {bookContainer, book, paper, front, flipped, back, frontContent, backContent, p1, p2, p3, p4, rightPageTrigger, leftPageTrigger, backCover, tag, tagBack} from "../../styles/book-tut.module.css"
+import {bookContainer, book, paper, front, flipped, back, frontContent, backContent, frontCover, backCover, rightPageTrigger, leftPageTrigger, tag, tagBack} from "../../styles/book-tut.module.css"
 // https://www.youtube.com/watch?v=0kD6ff2J3BQ
 const BookTut = () => {
     const [currentLocation, setLocation] = useState(1)
@@ -96,14 +96,14 @@ const BookTut = () => {
             {currentLocation !== minLocation ? <div className={leftPageTrigger} onClick={goPreviousPage}>Left</div> : null}
             <div className={`${paper} ${currentLocation >= 2 ? flipped : null}`}
                 style={{zIndex: getPaperZindex(1)}}>
-                <div className={`${front}`}>
-                    <div  className={frontContent} style={{backgroundColor:"black", borderLeft:"1px solid black"}}>
-                        <h1>Front 1</h1>
+                <div className={`${frontCover}`}>
+                    <div  className={frontContent}>
+                        <h1>Front Cover</h1>
                     </div>
                 </div>
-                <div className={back}>
-                    <div  className={backContent} style={{backgroundColor:"black",  borderLeft:"1px solid black"}}>
-                        <h1>Back 1</h1>
+                <div className={backCover}>
+                    <div  className={backContent}>
+                        <h1>Front Cover Back</h1>
                     </div>
                 </div>
             </div>
@@ -128,14 +128,14 @@ const BookTut = () => {
             })}
                     <div className={`${paper} ${currentLocation >= content.length + 3 ? flipped : null}`}
                         style={{zIndex: getPaperZindex(content.length+ 2)}}>
-                <div className={front}>
-                    <div  className={frontContent} style={{backgroundColor:"black"}}>
-                        <h1>Front 4</h1>
+                <div className={frontCover}>
+                    <div  className={frontContent}>
+                        <h1>Back Cover</h1>
                     </div>
                 </div>
-                <div className={back}>
-                    <div  className={backCover} style={{backgroundColor:"black"}}>
-                        <h1>Back 4</h1>
+                <div className={backCover}>
+                    <div  className={backContent}>
+                        <h1>Back Cover Back</h1>
                     </div>
                 </div>
             </div>
