@@ -80,29 +80,30 @@
     opacity: 0.0;
 }
 
-.rightPageTrigger:hover ~ .paper:after{
+.rightPageTrigger:hover ~ .paper > .front:after{
+box-sizing: border-box;
 content: '';
-width: 2.13em;
-height: 2.15em;
+padding:5%;
 position: absolute;
 top: 0px;
 right: 0px;
-background: linear-gradient(-135deg, transparent 1.5em, grey 0) no-repeat;
+background: linear-gradient(-135deg, black 50%, grey 0) no-repeat;
 border-bottom-left-radius: 10px;
 background-repeat: no-repeat;
 z-index: 10;
 }
 
-.leftPageTrigger:hover ~ .paper:before{
+.leftPageTrigger:hover ~ .paper > .back:before{
+box-sizing: border-box;
 content: '';
-width: 2.13em;
-height: 2.15em;
+padding:5%;
 position: absolute;
-background: linear-gradient(-225deg, transparent 1.5em, grey 0) no-repeat;
-border-bottom-right-radius: 10px;
+top: 0px;
+right: -1px;
+background: linear-gradient(-135deg, black 50%, grey 0) no-repeat;
+border-bottom-left-radius: 10px;
 background-repeat: no-repeat;
 z-index: 10;
-left: -100%;
 
 }
 
