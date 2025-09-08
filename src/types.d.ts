@@ -25,5 +25,5 @@ type PageContent = {
 
 type PageSideContent = {
 	content: String | React.JSX.Element
-	has_tag: boolean
+	has_tag?: boolean
 }

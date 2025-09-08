@@ -11,11 +11,11 @@ let tagIndex = -1
 const pageData : Array<PageSideContent> = [
     {content : <Contents/>, has_tag: true},
     {content : "Projects", has_tag: true},
-    {content : "Project 1", has_tag: false},
-    {content : "Project 2", has_tag: false},
+    {content : "Project 1"},
+    {content : "Project 2"},
     {content : "Articles", has_tag: true},
-    {content : "Article 1", has_tag: false},
-    {content : "Article 2", has_tag: false},
+    {content : "Article 1"},
+    {content : "Article 2"},
 ]
 
 const convertContent = (pageData: Array<PageSideContent>) => {
