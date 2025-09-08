@@ -9,13 +9,13 @@ import { PageContent, PageSideContent } from "../../types"
 let tagIndex = -1
 
 const pageData = [
-    {content : "Front 1", has_tag: true},
-    {content : "Back 1", has_tag: false},
-    {content : "Front 2", has_tag: true},
-    {content : "Back 2", has_tag: false},
-    {content : "Front 3", has_tag: false},
-    {content : "Back 3", has_tag: true},
-    {content : "Front 4", has_tag: true},
+    {content : "Contents", has_tag: true},
+    {content : "Projects", has_tag: true},
+    {content : "Project 1", has_tag: false},
+    {content : "Project 2", has_tag: false},
+    {content : "Articles", has_tag: true},
+    {content : "Article 1", has_tag: false},
+    {content : "Article 2", has_tag: false},
 ]
 
 const convertContent = (pageData: Array<PageSideContent>) => {
