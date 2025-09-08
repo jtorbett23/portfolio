@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: powderblue;
 }
 
 .tag:hover, .tagBack:hover, .leftPageTrigger:hover, .rightPageTrigger:hover {
@@ -28,10 +27,10 @@
 
 .book {
     position: relative;
-    width: 20%;
-    height: 80%;
-    min-height: 600px;
-    min-width: 400px;
+    width: 30%;
+    min-height: 375px;
+    min-width: 250px;
+    aspect-ratio: 1/1.5;
     transition: transform 0.5s;
 }
 
