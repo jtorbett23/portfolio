@@ -1,6 +1,6 @@
 import React from "react"
-import {card, cardContainer, cardContainerHeading} from "../styles/card.module.css"
-import { Project } from "../types";
+import {card, cardContainer, cardContainerHeading} from "../../styles/card.module.css"
+import { Project } from "../../types";
 
 type ProjectsCardProps = {
 	projects: Array<Project>

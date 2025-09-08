@@ -1,0 +1,22 @@
+.index {
+	color: var(--text-colour);
+	background-color: var(--background-colour);
+	display: flex;
+	flex-direction: column;
+	height: calc(100% - 20px);
+	padding: 10px;
+	min-width: 400px;
+}
+
+.header {
+	display: flex;
+	padding-right: 10%;
+	padding-bottom: 10px;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Raleway', sans-serif;
+}
+
+

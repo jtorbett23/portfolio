@@ -1,6 +1,6 @@
 import React from "react"
-import headshot from '../assets/headshot.png'
-import {card, centered, avatarText, avatarImage} from "../styles/card.module.css"
+import headshot from '../../assets/headshot.png'
+import {card, centered, avatarText, avatarImage} from "../../styles/card.module.css"
 
 const AvatarCard  = () => {
   return (

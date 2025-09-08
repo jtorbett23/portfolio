@@ -1,6 +1,6 @@
 import React from "react"
-import {card, cardContainer, cardContainerHeading, techBubble, tagContainer} from "../styles/card.module.css"
-import { Article } from "../types";
+import {card, cardContainer, cardContainerHeading, techBubble, tagContainer} from "../../styles/card.module.css"
+import { Article } from "../../types";
 
 type ArticlesCardProps = {
 	articles: Array<Article>

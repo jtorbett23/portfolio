@@ -1,6 +1,6 @@
 import React from "react"
-import {card, infoText, centered, infoIcon} from "../styles/card.module.css"
-import { Info } from "../types";
+import {card, infoText, centered, infoIcon} from "../../styles/card.module.css"
+import { Info } from "../../types";
 
 type InfoCardProps = {
 	infos: Array<Info>

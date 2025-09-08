@@ -1,5 +1,5 @@
 import React from "react"
-import {card, techBubble, techContainer, cardHeading} from "../styles/card.module.css"
+import {card, techBubble, techContainer, cardHeading} from "../../styles/card.module.css"
 
 type TechStackCardProps = {
 	techs: Array<String>
