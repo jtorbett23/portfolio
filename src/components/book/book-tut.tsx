@@ -15,7 +15,7 @@ const BookTut = () => {
     let tagIndex = -1
     const numberOfPages = content.length + 2;
     const minLocation = 1
-    const maxLocation = numberOfPages + 1; // add +1 for back cover
+    const maxLocation = numberOfPages; // add +1 for back cover
     const goNextPage = () => {
         if(currentLocation < maxLocation)
             setLocation(currentLocation + 1)
@@ -29,7 +29,7 @@ const BookTut = () => {
     }
 
     const getBookTransform = () => {
-        if(currentLocation === maxLocation)
+        if(currentLocation === numberOfPages + 1)
             return 'translateX(100%)'
         else if(currentLocation === minLocation)
             return 'translateX(0%)'
