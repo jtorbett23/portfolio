@@ -1,20 +1,21 @@
 import React, {useState} from "react"
-import {bookContainer, book, paper, front, flipped, back, frontContent, backContent, rightPageTrigger, leftPageTrigger, tag, tagBack, pageCornerBackward, pageCornerForward} from "../../styles/book.module.css"
+import {bookContainer, book, rightPageTrigger, leftPageTrigger} from "../../styles/book.module.css"
 import FrontCover from "./front-cover"
 import BackCover from "./back-cover"
+import Page from "./page"
+import { PageContent } from "../../types"
 
 // https://www.youtube.com/watch?v=0kD6ff2J3BQ
 const Book = () => {
     const [currentLocation, setLocation] = useState(1)
     const [flipDirection, setFlipDirection] = useState(1)
-    const content = [
+    const content: Array<PageContent>= [
         {front: "Front 1", back: "Back 1", has_tag: true}, 
         {front: "Front 2", back: "Back 2", has_tag: true},
         {front: "Front 3", back: "Back 3", has_tag: false},
         {front: "Front 4", back: "Back 4", has_tag: true}
     ]
 
-    const tagColours = ["red", "orange", "blue"]
     let tagIndex = -1
     const numberOfPages = content.length + 2;
     const minLocation = 1
@@ -101,21 +102,7 @@ const Book = () => {
             {content.map((page, index)=>{
                 if(page.has_tag)
                     tagIndex++
-                return <div className={`${paper} ${currentLocation >= index + 3 ? flipped : null}`}
-            style={{zIndex: getPaperZindex(index+ 2)}}>
-                <div className={`${front} ${currentLocation === index + 2 ? pageCornerForward : null } ${currentLocation === index + 3 ? pageCornerBackward : null }`}>
-                    {page.has_tag ?<div className={tag}  onMouseDown={() => goToPage(index + 2)} style={{backgroundColor: tagColours[tagIndex], marginLeft: `${(tagIndex + 1) * 6}%`}}></div> : null}
-                    <div className={frontContent}>
-                        <h1>{page.front}</h1>
-                    </div>
-                </div>
-                <div className={`${back} ${currentLocation === index + 2 ? pageCornerForward : null } ${currentLocation === index + 3 ? pageCornerBackward : null }`}>
-                    {page.has_tag ?<div className={tagBack}  onMouseDown={() => goToPage(index + 2)} style={{backgroundColor: tagColours[tagIndex], marginLeft: `${(tagIndex + 1) * 6}%`}}></div> : null}
-                    <div className={backContent}>
-                        <h1>{page.back}</h1>
-                    </div>
-                </div>
-            </div>
+                return <Page data={page} zIndex={getPaperZindex(index+ 2)} goToPage={goToPage} currentLocation={currentLocation} index={index} tagIndex={tagIndex}/>
             })}
             <BackCover currentLocation={currentLocation} zIndex={getPaperZindex(numberOfPages)} numberOfPages={numberOfPages}/>
         </div>
