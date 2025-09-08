@@ -1,5 +1,12 @@
 import React, {useState} from "react"
 import {bookContainer, book, paper, front, flipped, back, frontContent, backContent, frontCover, backCover, frontFrontCover, backFrontCover, rightPageTrigger, leftPageTrigger, tag, tagBack, pageCornerBackward, pageCornerForward} from "../../styles/book-tut.module.css"
+import {avatarImage} from "../../styles/card.module.css"
+import headshot from '../../assets/headshot.png'
+import data from '../../data.json'
+import {Contact} from '../../types'
+import { getIcon } from "../standard/info-card"
+import {infoText, centered}  from "../../styles/card.module.css"
+
 // https://www.youtube.com/watch?v=0kD6ff2J3BQ
 const BookTut = () => {
     const [currentLocation, setLocation] = useState(1)
@@ -97,8 +104,20 @@ const BookTut = () => {
             <div className={`${paper} ${currentLocation >= 2 ? flipped : null}`}
                 style={{zIndex: getPaperZindex(1)}}>
                 <div className={`${frontCover} ${currentLocation === 1 ? frontFrontCover: null} ${currentLocation === 2 ? backFrontCover: null}`}>
+                    <div className={frontContent} style={{color: "white", flexDirection: "column"}}>
+                        <h1>Portfolio</h1>
+                        <h2>Joshua Torbett</h2>
+                        <img className={avatarImage} src={headshot} alt={"Joshua Torbett Headshot"}/>
+                    </div>
                 </div>
                 <div className={`${backCover} ${currentLocation === 1 ? frontFrontCover: null} ${currentLocation === 2 ? backFrontCover: null}`}>
+                    <div className={backContent} style={{color: "white", flexDirection: "column"}}> 
+                        <h1>Contact</h1>
+                        {data.contact.map((info : Contact)=> {
+                            return <div className={infoText}><span>{getIcon(info.title)} {info.title}:</span> <span>{info.content}</span></div>
+                        })}
+                    </div>
+
                 </div>
             </div>
             {content.map((page, index)=>{

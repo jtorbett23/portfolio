@@ -19,7 +19,7 @@
 .avatarImage {
 	border-radius: 50%;
 	border-color: var(--accent-colour);
-	border-style: double;
+	border-style: solid;
 	border-width: 5px;
 }
 

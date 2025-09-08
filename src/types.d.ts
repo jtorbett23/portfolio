@@ -11,7 +11,7 @@ export type Project = {
 	url: string
 }
 
-export type Info = {
+export type Contact = {
 	title: string,
 	content: string,
 }

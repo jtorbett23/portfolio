@@ -12,7 +12,7 @@ const Standard = () => {
     <section className={content}>
       <section className={section1}>
         <AvatarCard/>
-        <InfoCard infos={data.information}/>
+        <InfoCard infos={data.contact}/>
         <TechStackCard techs={data.technologies}/>
       </section>
       <section className={section2}>

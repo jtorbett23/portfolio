@@ -1,9 +1,9 @@
 import React from "react"
 import {card, infoText, centered, infoIcon} from "../../styles/card.module.css"
-import { Info } from "../../types";
+import { Contact } from "../../types";
 
 type InfoCardProps = {
-	infos: Array<Info>
+	infos: Array<Contact>
 }
 
 
@@ -11,7 +11,7 @@ const InfoCard = ({infos} : InfoCardProps ) => {
   return (
 	<article className={`${card} ${centered}`}>
 		{/* <h2 className={cardHeading}>About Me</h2> */}
-		{infos.map((info : Info)=> {
+		{infos.map((info : Contact)=> {
 			return <div className={infoText}><span className={centered}>{getIcon(info.title)} {info.title}:</span> <span>{info.content}</span></div>
 		})}
 		
@@ -19,7 +19,7 @@ const InfoCard = ({infos} : InfoCardProps ) => {
   )
 }
 
-const getIcon = (name: string) => {
+export const getIcon = (name: string) => {
 	if (name === "Based In")
 		return <svg className={infoIcon} stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"></path></svg>
 	else if (name === "GitHub")
