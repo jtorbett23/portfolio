@@ -9,10 +9,17 @@
     cursor: pointer;
 }
 
-.tag, .tagBack
+.tag
 {
     width: 4%;
     height: 8%;
+    top: -5%;
+    position: absolute;
+}
+
+.tagBack {
+    width: 4%;
+    height: 5%;
     top: -5%;
     position: absolute;
 }

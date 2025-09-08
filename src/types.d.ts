@@ -17,7 +17,13 @@ export type Contact = {
 }
 
 type PageContent = {
-    front: String,
-    back: String,
-    has_tag: Boolean
+	front: String,
+	back: String,
+	has_tag_front: number,
+	has_tag_back: number
+}
+
+type PageSideContent = {
+	content: String,
+	has_tag: boolean
 }

@@ -3,20 +3,53 @@ import {bookContainer, book, rightPageTrigger, leftPageTrigger} from "../../styl
 import FrontCover from "./front-cover"
 import BackCover from "./back-cover"
 import Page from "./page"
-import { PageContent } from "../../types"
+import { PageContent, PageSideContent } from "../../types"
+
+
+let tagIndex = -1
+
+const pageData = [
+    {content : "Front 1", has_tag: true},
+    {content : "Back 1", has_tag: false},
+    {content : "Front 2", has_tag: true},
+    {content : "Back 2", has_tag: false},
+    {content : "Front 3", has_tag: false},
+    {content : "Back 3", has_tag: true},
+    {content : "Front 4", has_tag: true},
+]
+
+const convertContent = (pageData: Array<PageSideContent>) => {
+    const convertedData : Array<PageContent>= []
+    let currentPageIndex = 0
+    for (let data of pageData)
+    {
+        if(data.has_tag)
+            tagIndex++
+        if(convertedData.length === currentPageIndex + 1)
+        {
+            convertedData[currentPageIndex].back = data.content
+            if(data.has_tag)
+                convertedData[currentPageIndex].has_tag_back = tagIndex
+            currentPageIndex++
+        }
+        else{
+            convertedData.push({front: data.content, back: "", has_tag_front: -1, has_tag_back: -1})
+            if(data.has_tag)
+                convertedData[currentPageIndex].has_tag_front = tagIndex
+        }
+    }
+
+    return convertedData
+}
+
+const content : Array<PageContent> = convertContent(pageData)
+
 
 // https://www.youtube.com/watch?v=0kD6ff2J3BQ
 const Book = () => {
     const [currentLocation, setLocation] = useState(1)
     const [flipDirection, setFlipDirection] = useState(1)
-    const content: Array<PageContent>= [
-        {front: "Front 1", back: "Back 1", has_tag: true}, 
-        {front: "Front 2", back: "Back 2", has_tag: true},
-        {front: "Front 3", back: "Back 3", has_tag: false},
-        {front: "Front 4", back: "Back 4", has_tag: true}
-    ]
 
-    let tagIndex = -1
     const numberOfPages = content.length + 2;
     const minLocation = 1
     const maxLocation = numberOfPages; // add +1 for back cover
@@ -100,9 +133,7 @@ const Book = () => {
             {currentLocation !== minLocation ? <div className={leftPageTrigger} onClick={goPreviousPage}>Left</div> : null}
             <FrontCover currentLocation={currentLocation} zIndex={getPaperZindex(1)} />
             {content.map((page, index)=>{
-                if(page.has_tag)
-                    tagIndex++
-                return <Page data={page} zIndex={getPaperZindex(index+ 2)} goToPage={goToPage} currentLocation={currentLocation} index={index} tagIndex={tagIndex}/>
+                return <Page data={page} zIndex={getPaperZindex(index+ 2)} goToPage={goToPage} currentLocation={currentLocation} index={index}/>
             })}
             <BackCover currentLocation={currentLocation} zIndex={getPaperZindex(numberOfPages)} numberOfPages={numberOfPages}/>
         </div>

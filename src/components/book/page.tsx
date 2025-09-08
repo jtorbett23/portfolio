@@ -8,16 +8,15 @@ type PageProps = {
 	currentLocation: number,
     zIndex: number,
     index: number,
-    tagIndex: number,
     goToPage: Function 
 }
 
-const Page = ({data, currentLocation, zIndex, index, tagIndex, goToPage}: PageProps) => {
+const Page = ({data, currentLocation, zIndex, index, goToPage}: PageProps) => {
   return (
         <div className={`${paper} ${currentLocation >= index + 3 ? flipped : null}`}
     style={{zIndex: zIndex}}>
-        <PageSide tagIndex={tagIndex} index={index} goToPage={goToPage} currentLocation={currentLocation} data={data}/>
-        <PageSide tagIndex={tagIndex} index={index} goToPage={goToPage} currentLocation={currentLocation} data={data} isBack={true}/>
+        <PageSide index={index} goToPage={goToPage} currentLocation={currentLocation} data={data}/>
+        <PageSide index={index} goToPage={goToPage} currentLocation={currentLocation} data={data} isBack={true}/>
     </div>
   )
 }
