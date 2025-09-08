@@ -1,11 +1,7 @@
 import React, {useState} from "react"
-import {bookContainer, book, paper, front, flipped, back, frontContent, backContent, frontCover, backCover, frontFrontCover, backFrontCover, rightPageTrigger, leftPageTrigger, tag, tagBack, pageCornerBackward, pageCornerForward} from "../../styles/book.module.css"
-import {avatarImage} from "../../styles/card.module.css"
-import headshot from '../../assets/headshot.png'
-import data from '../../data.json'
-import {Contact} from '../../types'
-import { getIcon } from "../standard/info-card"
-import {infoText, centered}  from "../../styles/card.module.css"
+import {bookContainer, book, paper, front, flipped, back, frontContent, backContent, rightPageTrigger, leftPageTrigger, tag, tagBack, pageCornerBackward, pageCornerForward} from "../../styles/book.module.css"
+import FrontCover from "./front-cover"
+import BackCover from "./back-cover"
 
 // https://www.youtube.com/watch?v=0kD6ff2J3BQ
 const Book = () => {
@@ -101,25 +97,7 @@ const Book = () => {
         style={{transform: getBookTransform()}}>
             {currentLocation !== maxLocation ? <div className={rightPageTrigger} onClick={goNextPage}>Right</div> : null}
             {currentLocation !== minLocation ? <div className={leftPageTrigger} onClick={goPreviousPage}>Left</div> : null}
-            <div className={`${paper} ${currentLocation >= 2 ? flipped : null}`}
-                style={{zIndex: getPaperZindex(1)}}>
-                <div className={`${frontCover} ${currentLocation === 1 ? frontFrontCover: null} ${currentLocation === 2 ? backFrontCover: null}`}>
-                    <div className={frontContent} style={{color: "white", flexDirection: "column"}}>
-                        <h1>Portfolio</h1>
-                        <h2>Joshua Torbett</h2>
-                        <img className={avatarImage} src={headshot} alt={"Joshua Torbett Headshot"}/>
-                    </div>
-                </div>
-                <div className={`${backCover} ${currentLocation === 1 ? frontFrontCover: null} ${currentLocation === 2 ? backFrontCover: null}`}>
-                    <div className={backContent} style={{color: "white", flexDirection: "column"}}> 
-                        <h1>Contact</h1>
-                        {data.contact.map((info : Contact)=> {
-                            return <div className={infoText}><span>{getIcon(info.title)} {info.title}:</span> <span>{info.content}</span></div>
-                        })}
-                    </div>
-
-                </div>
-            </div>
+            <FrontCover currentLocation={currentLocation} zIndex={getPaperZindex(1)} />
             {content.map((page, index)=>{
                 if(page.has_tag)
                     tagIndex++
@@ -139,13 +117,7 @@ const Book = () => {
                 </div>
             </div>
             })}
-                    <div className={`${paper} ${currentLocation >= content.length + 3 ? flipped : null}`}
-                        style={{zIndex: getPaperZindex(content.length+ 2)}}>
-                <div className={frontCover}>
-                </div>
-                <div className={backCover}>
-                </div>
-            </div>
+            <BackCover currentLocation={currentLocation} zIndex={getPaperZindex(numberOfPages)} numberOfPages={numberOfPages}/>
         </div>
         </div>
     )
