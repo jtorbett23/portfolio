@@ -1,4 +1,4 @@
-import React from "react"
+import React, {isValidElement} from "react"
 import {front, back,  pageCornerForward, pageCornerBackward, frontContent, backContent, tag, tagBack} from "../../styles/book.module.css"
 import { PageContent } from "../../types"
 
@@ -22,7 +22,7 @@ const PageSide = ({data, currentLocation, index, goToPage, isBack=false}: PageSi
             {data.has_tag_front !== -1 ? <div className={tagBack}  onMouseDown={() => goToPage(index + 2)} style={{backgroundColor: tagColours[data.has_tag_front], marginLeft: `${(data.has_tag_front + 1) * 6}%`}}></div> : null}
             {data.has_tag_back !== -1 ?<div className={tag}  onMouseDown={() => goToPage(index + 3)} style={{backgroundColor: tagColours[data.has_tag_back], marginLeft: `${(data.has_tag_back + 1) * 6}%`}}></div> : null}
             <div className={backContent}>
-                <h1>{data.back}</h1>
+                {isValidElement(data.back)? data.back : <h1>{data.back}</h1> }
             </div>
         </div>
         )
@@ -31,7 +31,7 @@ const PageSide = ({data, currentLocation, index, goToPage, isBack=false}: PageSi
             {data.has_tag_front !== -1 ?<div className={tag}  onMouseDown={() => goToPage(index + 2)} style={{backgroundColor: tagColours[data.has_tag_front], marginLeft: `${(data.has_tag_front + 1) * 6}%`}}></div> : null}
             {data.has_tag_back !== -1 ?<div className={tagBack}  onMouseDown={() => goToPage(index + 3)} style={{backgroundColor: tagColours[data.has_tag_back], marginLeft: `${(data.has_tag_back + 1) * 6}%`}}></div> : null}
             <div className={frontContent}>
-                <h1>{data.front}</h1>
+                {isValidElement(data.front) ? data.front : <h1>{data.front}</h1> }
             </div>
         </div>
     )

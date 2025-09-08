@@ -1,15 +1,15 @@
-import React, {useState} from "react"
+import React, {useState, isValidElement} from "react"
 import {bookContainer, book, rightPageTrigger, leftPageTrigger} from "../../styles/book.module.css"
 import FrontCover from "./front-cover"
 import BackCover from "./back-cover"
 import Page from "./page"
 import { PageContent, PageSideContent } from "../../types"
-
+import Contents from "./pages/contents"
 
 let tagIndex = -1
 
-const pageData = [
-    {content : "Contents", has_tag: true},
+const pageData : Array<PageSideContent> = [
+    {content : <Contents/>, has_tag: true},
     {content : "Projects", has_tag: true},
     {content : "Project 1", has_tag: false},
     {content : "Project 2", has_tag: false},
@@ -27,7 +27,10 @@ const convertContent = (pageData: Array<PageSideContent>) => {
             tagIndex++
         if(convertedData.length === currentPageIndex + 1)
         {
+
             convertedData[currentPageIndex].back = data.content
+       
+
             if(data.has_tag)
                 convertedData[currentPageIndex].has_tag_back = tagIndex
             currentPageIndex++

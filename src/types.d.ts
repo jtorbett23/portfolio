@@ -17,13 +17,13 @@ export type Contact = {
 }
 
 type PageContent = {
-	front: String,
-	back: String,
+	front: String | React.JSX.Element,
+	back: String | React.JSX.Element
 	has_tag_front: number,
 	has_tag_back: number
 }
 
 type PageSideContent = {
-	content: String,
+	content: String | React.JSX.Element
 	has_tag: boolean
 }
