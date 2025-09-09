@@ -4,13 +4,14 @@ import FrontCover from "./front-cover"
 import BackCover from "./back-cover"
 import Page from "./page"
 import { PageContent, PageSideContent } from "../../types"
-import Contents from "./pages/contents"
-import { getArticles } from "./pages/articles"
-import { getProjects } from "./pages/projects"
+import Contents from "./pages/contents-page"
+import { getArticles } from "./pages/articles-section"
+import { getProjects } from "./pages/projects-section"
+import AboutMe from "./pages/about-me-page"
 
 let tagIndex = -1
 
-const pageData : Array<PageSideContent> = [{content : <Contents/>, has_tag: true}, ...getArticles(), ...getProjects()] 
+const pageData : Array<PageSideContent> = [{content : <Contents/>, has_tag: true}, {content: <AboutMe/>, has_tag: true}, ...getProjects(), ...getArticles()] 
 
 
 const convertContent = (pageData: Array<PageSideContent>) => {

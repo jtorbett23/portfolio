@@ -157,8 +157,8 @@ z-index: 10;
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .backContent {
@@ -171,4 +171,9 @@ z-index: 10;
 .flipped .backCover
 {
     transform: rotateY(-180deg);
+}
+
+.sectionTitle {
+    margin-top: auto;
+    margin-bottom: auto;
 }

@@ -1,11 +1,11 @@
-export type Article = {
+export type ArticleData = {
 	title: string,
 	description: string,
 	tags: Array<string>,
 	url: string
 }
 
-export type Project = {
+export type ProjectData = {
 	title: string,
 	description: string,
 	url: string
