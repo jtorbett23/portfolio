@@ -1,22 +1,17 @@
-import React, {useState, isValidElement} from "react"
+import React, {useState} from "react"
 import {bookContainer, book, rightPageTrigger, leftPageTrigger} from "../../styles/book.module.css"
 import FrontCover from "./front-cover"
 import BackCover from "./back-cover"
 import Page from "./page"
 import { PageContent, PageSideContent } from "../../types"
 import Contents from "./pages/contents"
+import { getArticles } from "./pages/articles"
+import { getProjects } from "./pages/projects"
 
 let tagIndex = -1
 
-const pageData : Array<PageSideContent> = [
-    {content : <Contents/>, has_tag: true},
-    {content : "Projects", has_tag: true},
-    {content : "Project 1"},
-    {content : "Project 2"},
-    {content : "Articles", has_tag: true},
-    {content : "Article 1"},
-    {content : "Article 2"},
-]
+const pageData : Array<PageSideContent> = [{content : <Contents/>, has_tag: true}, ...getArticles(), ...getProjects()] 
+
 
 const convertContent = (pageData: Array<PageSideContent>) => {
     const convertedData : Array<PageContent>= []
