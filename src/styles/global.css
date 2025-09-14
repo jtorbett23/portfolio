@@ -30,10 +30,10 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
 }
 
 [data-theme="dark"] {
-    --text-colour: #f6f6f6;
+    --text-colour: #f6f6f6e7;
     --background-colour: #0a0a0a;
-    --primary-card-colour: hsl(236, 95%, 46%);
-    --secondary-card-colour: #FAF7F5;
+    --primary-card-colour: #121212c4;
+    --secondary-card-colour: #121212de;
     --drop-shadow-card-colour: grey;
     --accent-colour: #74C8CC;
 }
