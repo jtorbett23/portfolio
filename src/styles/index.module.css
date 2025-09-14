@@ -20,4 +20,8 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-
+@media (max-width : 400px ) {
+	.index {
+		min-width: 330px;
+	}
+}
