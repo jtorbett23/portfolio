@@ -11,7 +11,7 @@ import AboutMe from "./pages/about-me-page"
 
 let tagIndex = -1
 
-const pageData : Array<PageSideContent> = [{content : <Contents/>, has_tag: true}, {content: <AboutMe/>, has_tag: true}, ...getProjects(), ...getArticles()] 
+const pageData : Array<PageSideContent> = [{content: <AboutMe/>, has_tag: true}, ...getProjects(), ...getArticles()] 
 
 
 const convertContent = (pageData: Array<PageSideContent>) => {

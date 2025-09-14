@@ -8,7 +8,9 @@ export type ArticleData = {
 export type ProjectData = {
 	title: string,
 	description: string,
+	tags: Array<string>,
 	url: string
+	live_urL?: string
 }
 
 export type Contact = {

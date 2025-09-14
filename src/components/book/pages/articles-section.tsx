@@ -16,6 +16,6 @@ const ArticleSection = () => {
 export const getArticles = () : Array<PageSideContent>  => {
     let articles : Array<PageSideContent> = [{content: <ArticleSection/>, has_tag: true}]
     for (const article of data.articles)
-        articles.push({content: <Article articleData={article}/>})
+        articles.push({content: <Article article={article}/>})
     return articles 
 }

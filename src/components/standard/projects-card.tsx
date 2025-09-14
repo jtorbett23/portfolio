@@ -1,5 +1,5 @@
 import React from "react"
-import {card, cardContainer, cardContainerHeading} from "../../styles/card.module.css"
+import {card, cardContainer, cardContainerHeading, techBubble, tagContainer} from "../../styles/card.module.css"
 import { ProjectData } from "../../types";
 
 type ProjectsCardProps = {
@@ -14,6 +14,11 @@ const ProjectsCard = ({projects} : ProjectsCardProps ) => {
 			return <div className={card}>
 				<h3><a href={project.url} target="_blank" rel="noopener noreferrer">{project.title}</a></h3>
 				<span>{project.description}</span>
+				<div className={tagContainer}>
+					{project.tags.map((tech : String)=> {
+						return <span className={techBubble}>{tech}</span>
+					})}
+				</div>
 			</div>
 		})}
 		

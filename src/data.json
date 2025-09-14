@@ -20,17 +20,19 @@
 
 	"intro": "Hi I am Josh, a London based Software Engineer with a keen interest in DevOps & Education",
 
-	"technologies": ["JavaScript", "TypeScript", "AWS", "Git", "Docker", "CSS", "SQL", "Python"],
+	"technologies": ["Python", "JavaScript", "TypeScript", "AWS", "Docker", "CSS", "SQL"],
 	
 	"projects": [
 		{
 			"title": "gitlab-pages-react-example",
 			"description": "Example of how to deploy a React App to Gitlab pages via Gitlab CI/CD.",
+			"tags": ["React", "Gitlab", "CI/CD", "Static Site Hosting"],
 			"url": "https://github.com/jtorbett23/gitlab-pages-react-example"
 		},
 		{
 			"title": "fastapi-render-tutorial",
 			"description": "Example of how to deploy a fastapi App to Render via Github Actions (CI/CD).",
+			"tags": ["fastapi", "Github Actions", "CI/CD", "API Hosting"],
 			"url": "https://github.com/jtorbett23/fastapi-render-tutorial"
 		}
 	],
