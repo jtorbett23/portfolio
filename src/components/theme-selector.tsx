@@ -10,7 +10,7 @@ const ThemeSelector = ({defaultTheme, handleChange}: ThemeSelectorProps) => {
   return (
     <>
     <label className={themeLabel}>Theme:</label>
-        <select name="theme" id="theme" defaultValue={defaultTheme} onChange={handleChange}>
+        <select name="theme" id="theme" defaultValue={defaultTheme} value={defaultTheme} onChange={handleChange}>
         {/* <option value="book">Book</option> */}
         <option value="light">Light</option>
         <option value="dark">Dark</option>
