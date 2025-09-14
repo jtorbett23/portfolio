@@ -33,3 +33,13 @@
 		flex-direction: column;
 	}
 }
+
+@media (max-width : 340px ) {
+	.section1{
+		width: 90%;
+	}
+
+	.section2 {
+		width: 90%;
+	}
+}
