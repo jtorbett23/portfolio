@@ -8,7 +8,7 @@ import useLocalStorage from "use-local-storage";
 
 const IndexPage: React.FC<PageProps> = () => {
   const [theme, setTheme] = useLocalStorage("theme", "light");
-
+  console.log(theme)
   return (
     <div className={index} data-theme={theme}>
       <header className={header}>
