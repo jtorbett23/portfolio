@@ -7,10 +7,7 @@ import {index, header} from "../styles/index.module.css"
 import useLocalStorage from "use-local-storage";
 
 const IndexPage: React.FC<PageProps> = () => {
-  let defaultTheme = "light"
-  if(window.navigator.maxTouchPoints <= 1)
-    defaultTheme = "book"
-  const [theme, setTheme] = useLocalStorage("theme", defaultTheme);
+  const [theme, setTheme] = useLocalStorage("theme", "book");
 
   return (
     <div className={index} data-theme={theme}>
