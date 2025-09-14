@@ -2,6 +2,8 @@
 
 This is a portfolio website written with Gatsby and Typescript deployed on Github Pages.
 
+Live Url: https://jtorbett23.github.io/portfolio
+
 # Commands
 
 - `npm install` - Installs dependencies

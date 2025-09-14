@@ -1,19 +1,24 @@
 import React from "react"
-import {card, cardContainer, cardContainerHeading} from "../../styles/card.module.css"
-import { Project } from "../../types";
+import {card, cardContainer, cardContainerHeading, techBubble, tagContainer} from "../../styles/card.module.css"
+import { ProjectData } from "../../types";
 
 type ProjectsCardProps = {
-	projects: Array<Project>
+	projects: Array<ProjectData>
 };
 
 const ProjectsCard = ({projects} : ProjectsCardProps ) => {
   return (
 	<article className={cardContainer}>
 		<h2 className={cardContainerHeading}>Projects</h2>
-		{projects.map((project:Project)=> {
+		{projects.map((project:ProjectData)=> {
 			return <div className={card}>
 				<h3><a href={project.url} target="_blank" rel="noopener noreferrer">{project.title}</a></h3>
 				<span>{project.description}</span>
+				<div className={tagContainer}>
+					{project.tags.map((tech : String)=> {
+						return <span className={techBubble}>{tech}</span>
+					})}
+				</div>
 			</div>
 		})}
 		
