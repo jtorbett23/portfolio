@@ -34,3 +34,4 @@ Todo:
 - Front page - image in the middle and name at bottom
     - try removing picture to about me
 - Checkout slip - for library for contact
+    - Past companies 
