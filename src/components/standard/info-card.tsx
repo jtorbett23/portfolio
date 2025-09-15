@@ -9,14 +9,22 @@ type InfoCardProps = {
 
 
 const InfoCard = ({infos} : InfoCardProps ) => {
-  return (
-	<article className={`${card} ${centered}`}>
-		{infos.map((info : Contact, index:number)=> {
-			return <div key={index} className={infoText}><span className={centered}>{getIcon(info.title)} {info.title}:</span> <span>{info.content}</span></div>
-		})}
-		
-	</article>
-  )
+
+	const getContent = (info: Contact) => {
+		if(info.url)
+			return <a href={info.url} target="_blank" rel="noopener noreferrer"> <span>{info.content}</span> </a>
+
+		return <span>{info.content}</span>
+	}
+
+	return (
+		<article className={`${card} ${centered}`}>
+			{infos.map((info : Contact, index:number)=> {
+				return <div key={index} className={infoText}><span className={centered}>{getIcon(info.title)} {info.title}:</span> {getContent(info)}</div>
+			})}
+			
+		</article>
+	)
 }
 
 export default InfoCard

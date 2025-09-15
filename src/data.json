@@ -6,7 +6,8 @@
 		},
 		{
 			"title": "GitHub",
-			"content" : "jtorbett23"
+			"content" : "jtorbett23",
+			"url": "https://dev.to/jtorbett23"
 		},
 		{
 			"title": "Email",
@@ -14,7 +15,13 @@
 		},
 		{
 			"title": "Dev",
-			"content": "jtorbett23"
+			"content": "jtorbett23",
+			"url": "https://dev.to/jtorbett23"
+		},
+		{
+			"title": "LinkedIn",
+			"content": "Joshua Torbett",
+			"url": "https://www.linkedin.com/in/joshua-torbett-7a7b85a4"
 		}
 	],
 

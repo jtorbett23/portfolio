@@ -16,6 +16,7 @@ export type ProjectData = {
 export type Contact = {
 	title: string,
 	content: string,
+	url?: string
 }
 
 type PageContent = {
