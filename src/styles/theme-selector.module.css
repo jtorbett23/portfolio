@@ -1,3 +1,14 @@
 .themeLabel {
 	padding-right: 10px;
 }
+
+.themeSelect {
+	background-color: var(--primary-card-colour);
+	color: var(--text-colour);
+	border-radius: 10px;
+	appearance: none;
+	font: inherit;
+	min-height: 2em;
+	padding-right: 0.4em;
+	padding-left: 0.4em;
+}

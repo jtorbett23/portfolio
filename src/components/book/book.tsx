@@ -132,7 +132,7 @@ const Book = () => {
             {currentLocation !== minLocation ? <div className={leftPageTrigger} onClick={goPreviousPage}>Left</div> : null}
             <FrontCover currentLocation={currentLocation} zIndex={getPaperZindex(1)} />
             {content.map((page, index)=>{
-                return <Page data={page} zIndex={getPaperZindex(index+ 2)} goToPage={goToPage} currentLocation={currentLocation} index={index}/>
+                return <Page key={index} data={page} zIndex={getPaperZindex(index+ 2)} goToPage={goToPage} currentLocation={currentLocation} index={index}/>
             })}
             <BackCover currentLocation={currentLocation} zIndex={getPaperZindex(numberOfPages)} numberOfPages={numberOfPages}/>
         </div>

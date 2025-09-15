@@ -10,8 +10,8 @@ const AboutMe = () => {
           <span>{data.intro}</span>
           <h2>Tech Stack Experience</h2>
           <div style={{alignSelf: "flex-start"}}> 
-            {data.technologies.map((tech : String)=> {
-                return <span className={techBubble}>{tech}</span>
+            {data.technologies.map((tech : String, index:number)=> {
+                return <span key={index} className={techBubble}>{tech}</span>
               })}
           </div>
         </div>
