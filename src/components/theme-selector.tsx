@@ -13,7 +13,7 @@ const ThemeSelector = ({theme, handleChange, isMobile}: ThemeSelectorProps) => {
     <div style={{display:"flex", alignItems: "center"}}>
     <label className={themeLabel}>Theme:</label>
       <select className={themeSelect} name="theme" id="theme" value={theme}  onChange={handleChange}>
-      {!isMobile && <option value="book">Book</option>}
+      {/* {!isMobile && <option value="book">Book</option>} */}
       <option value="light">Light</option>
       <option value="dark">Dark</option>
     </select>

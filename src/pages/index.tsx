@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, ChangeEvent } from "react"
+import React, { useEffect, useState, ChangeEvent } from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import Standard from "../components/standard/standard";
 import Book from "../components/book/book";
@@ -14,7 +14,8 @@ const IndexPage: React.FC<PageProps> = () => {
         if(window.__theme !== undefined)
           setTheme(String(window.__theme))
         else
-          setTheme(!window.__isMobile ? 'book' : 'light')
+          setTheme('light')
+        // setTheme(!window.__isMobile ? 'book' : 'light')
         setIsMobile(window.__isMobile)
     },[typeof window !== "undefined" && typeof window.localStorage !== undefined])
   
