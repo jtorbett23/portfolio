@@ -29,7 +29,7 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <div className={index}>
       <header className={header}>
-        <ThemeSelector theme={theme} handleChange={handleChange}/>
+        {<ThemeSelector theme={theme} handleChange={handleChange}/>}
       </header>
       <Book/>
       <Standard/>

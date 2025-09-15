@@ -1,5 +1,5 @@
-import React, {useState, useCallback, ChangeEvent, useEffect} from "react"
-import {themeLabel} from "../styles/theme-selector.module.css"
+import React from "react"
+import {themeLabel, themeSelect} from "../styles/theme-selector.module.css"
 import {isMobile} from 'react-device-detect';
 
 
@@ -10,14 +10,14 @@ type ThemeSelectorProps = {
 
 const ThemeSelector = ({theme, handleChange}: ThemeSelectorProps) => {
   return (
-    <>
+    <div style={{display:"flex", alignItems: "center"}}>
     <label className={themeLabel}>Theme:</label>
-        <select name="theme" id="theme" value={theme}  onChange={handleChange}>
-        {!isMobile && <option value="book">Book</option>}
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-      </select>
-    </>
+      <select className={themeSelect} name="theme" id="theme" value={theme}  onChange={handleChange}>
+      {!isMobile && <option value="book">Book</option>}
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+    </div>
   )
 }
 
