@@ -8,5 +8,7 @@
 	border-radius: 10px;
 	appearance: none;
 	font: inherit;
-	padding: 0.4em
+	min-height: 2em;
+	padding-right: 0.4em;
+	padding-left: 0.4em;
 }
