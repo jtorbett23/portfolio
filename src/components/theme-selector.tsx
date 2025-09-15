@@ -1,14 +1,14 @@
 import React from "react"
 import {themeLabel, themeSelect} from "../styles/theme-selector.module.css"
-import {isMobile} from 'react-device-detect';
 
 
 type ThemeSelectorProps = {
   theme: string,
-  handleChange: any
+  handleChange: any,
+  isMobile: boolean
 }
 
-const ThemeSelector = ({theme, handleChange}: ThemeSelectorProps) => {
+const ThemeSelector = ({theme, handleChange, isMobile}: ThemeSelectorProps) => {
   return (
     <div style={{display:"flex", alignItems: "center"}}>
     <label className={themeLabel}>Theme:</label>
