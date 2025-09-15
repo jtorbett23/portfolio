@@ -20,6 +20,9 @@ Live Url: https://jtorbett23.github.io/portfolio
 - https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/how-gatsby-works-with-github-pages/
 
 
+- Avoid Theme flicker / might also use for checking for mobile
+    https://victorzhou.com/blog/dark-mode-gatsby
+
 Todo:
 - Make the page transistion area larger
 - Increase length of the tab
