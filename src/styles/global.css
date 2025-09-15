@@ -19,6 +19,20 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
     --secondary-card-colour: hsl(26, 18%, 92%);
     --drop-shadow-card-colour: grey;
     --accent-colour: #74C8CC;
+    --show-book: flex;
+    --show-standard: none;
+}
+
+:root.light {
+    --text-colour: #000;
+    --background-colour: #E7E2DF;
+    --primary-card-colour: #FAF7F5;
+    --secondary-card-colour: hsl(26, 18%, 92%);
+    --drop-shadow-card-colour: grey;
+    --accent-colour: #74C8CC;
+    --show-book: none;
+    --show-standard: flex;
+
 }
 
 :root.dark {
@@ -28,4 +42,6 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
     --secondary-card-colour: #121212de;
     --drop-shadow-card-colour: grey;
     --accent-colour: purple;
+    --show-book: none;
+    --show-standard: flex;
 }

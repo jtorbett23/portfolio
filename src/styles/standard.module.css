@@ -1,6 +1,7 @@
 .content {
 	display: flex;
 	padding-top: 20px;
+	display: var(--show-standard)
 }
 .section1 {
 	width: 35%;

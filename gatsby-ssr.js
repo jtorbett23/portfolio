@@ -11,7 +11,10 @@ exports.onRenderBody = ({ setHeadComponents }) => {
     function setTheme(theme) {
       if (theme === 'dark') {
         document.documentElement.className = 'dark';
-      } else {
+      } else if (theme === 'light') {
+        document.documentElement.className = 'light';
+      }
+      else {
         document.documentElement.className = '';
       }
       window.__theme = theme;
