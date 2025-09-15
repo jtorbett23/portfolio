@@ -1,13 +1,4 @@
-'use strict';
-
-const React = require('react');
-
-exports.onRenderBody = ({ setHeadComponents }) => {
-  setHeadComponents([
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `
-    (function() {
+  (function() {
     function setTheme(theme) {
       if (theme === 'dark') {
         document.documentElement.className = 'dark';
@@ -32,27 +23,7 @@ exports.onRenderBody = ({ setHeadComponents }) => {
       preferredTheme = localStorage.getItem('theme');
     } catch (e) {}
     setTheme(preferredTheme);
+    // var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+    // setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
   })();
-  `
-          .replace(/\n/g, ' ')
-          .replace(/ {2}/g, ''),
-      }}
-    />,
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `
-  (function() {
-    let isMobile = false;
-    if(window.navigator.maxTouchPoints > 1)
-    {
-        isMobile = true;
-    }
-    window.__isMobile = isMobile;
-  })();
-  `
-          .replace(/\n/g, ' ')
-          .replace(/ {2}/g, ''),
-      }}
-    />,
-  ]);
-};
