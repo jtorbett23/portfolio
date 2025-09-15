@@ -16,8 +16,8 @@ const Project = ({project} : ProjectProps) => {
               <span>{project.description}</span>
               <h2 style={{alignSelf: "flex-start"}}>Tags</h2>
                       <div style={{alignSelf: "flex-start"}}>
-                      {project.tags.map((tech : String)=> {
-                        return <span className={techBubble}>{tech}</span>
+                      {project.tags.map((tech : String, index: number)=> {
+                        return <span key={index} className={techBubble}>{tech}</span>
                       })}
               </div>
               <div style={{justifySelf: "center", alignSelf:"center", height:"25%", width:"25%", "paddingTop": "20px"}}>

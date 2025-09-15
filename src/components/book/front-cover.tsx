@@ -25,8 +25,8 @@ const FrontCover = ({currentLocation, zIndex}: FrontCoverProps) => {
             <div className={`${backCover} ${currentLocation === 1 ? frontFrontCover: null} ${currentLocation === 2 ? backFrontCover: null}`}>
                 <div className={backContent} style={{color: "white", flexDirection: "column"}}> 
                     <h1>Contact</h1>
-                    {data.contact.map((info : Contact)=> {
-                        return <div className={infoText}><span>{getIcon(info.title)} {info.title}:</span> <span>{info.content}</span></div>
+                    {data.contact.map((info: Contact, index: number) => {
+                        return <div key={index} className={infoText}><span>{getIcon(info.title)} {info.title}:</span> <span>{info.content}</span></div>
                     })}
                 </div>
             </div>

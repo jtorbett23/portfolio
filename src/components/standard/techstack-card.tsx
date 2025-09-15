@@ -10,8 +10,8 @@ const TechStackCard = ({techs} : TechStackCardProps ) => {
 	<article className={card}>
 		<h2 className={cardHeading}>Tech Stack</h2>
 		<div className={techContainer}>
-		{techs.map((tech : String)=> {
-			return <span className={techBubble}>{tech}</span>
+		{techs.map((tech : String, index:number)=> {
+			return <span key={index} className={techBubble}>{tech}</span>
 		})}
 		</div>
 		
