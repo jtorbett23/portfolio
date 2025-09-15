@@ -1,21 +1,38 @@
-import React from "react"
+import React, { useEffect, useState, useCallback, ChangeEvent } from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import Standard from "../components/standard/standard";
 import Book from "../components/book/book";
 import ThemeSelector from "../components/theme-selector";
 import {index, header} from "../styles/index.module.css"
-import useLocalStorage from "use-local-storage";
+import {isMobile} from 'react-device-detect';
+
 
 const IndexPage: React.FC<PageProps> = () => {
-  const [theme, setTheme] = useLocalStorage("theme", "book");
+    const [theme, setTheme] = useState(!isMobile ? 'book' : 'light');
+  
+    useEffect(() => {
+        // set in gatsby ssr
+        setTheme(String(window.__theme))
+    },[typeof window !== "undefined" && typeof window.localStorage !== undefined])
+  
+  
+    const handleChange = useCallback(
+      (e:  ChangeEvent<HTMLSelectElement>) => {
+        const newTheme: string = e.target.value;
+        setTheme(newTheme);
+        // set in gatsby ssr
+        window.__setPreferredTheme(newTheme);
+      },
+      [setTheme]
+    );
 
   return (
-    <div className={index} data-theme={theme}>
+    <div className={index}>
       <header className={header}>
-        <ThemeSelector defaultTheme={theme} handleChange={
-          (e: React.ChangeEvent<HTMLInputElement>) => setTheme(e.target.value)} />
+        <ThemeSelector theme={theme} handleChange={handleChange}/>
       </header>
-      {theme.includes("book") ? <Book/> : <Standard/>}
+      <Book/>
+      <Standard/>
     </div>
   )
 }

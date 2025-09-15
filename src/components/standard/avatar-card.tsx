@@ -6,7 +6,7 @@ const AvatarCard  = () => {
   return (
 	<article className={`${card} ${centered}`}>
 		<img className={avatarImage} src={headshot} alt={"Joshua Torbett"}/>
-		<h2 className={avatarText}>Joshua Harvey Torbett</h2>
+		<h2 className={avatarText}>Joshua Torbett</h2>
 		<h2 className={avatarText}>Software Engineer</h2>
 	</article>
   )

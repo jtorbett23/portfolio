@@ -9,6 +9,7 @@
 
 html, body, #___gatsby, #gatsby-focus-wrapper {
     height: 100%;
+    overflow: auto;
 }
 
 :root {
@@ -18,22 +19,29 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
     --secondary-card-colour: hsl(26, 18%, 92%);
     --drop-shadow-card-colour: grey;
     --accent-colour: #74C8CC;
+    --show-book: flex;
+    --show-standard: none;
 }
 
-[data-theme="light"]{
-	--text-colour: #000;
+:root.light {
+    --text-colour: #000;
     --background-colour: #E7E2DF;
     --primary-card-colour: #FAF7F5;
     --secondary-card-colour: hsl(26, 18%, 92%);
     --drop-shadow-card-colour: grey;
     --accent-colour: #74C8CC;
+    --show-book: none;
+    --show-standard: flex;
+
 }
 
-[data-theme="dark"] {
+:root.dark {
     --text-colour: #f6f6f6e7;
     --background-colour: #0a0a0a;
     --primary-card-colour: #121212c4;
     --secondary-card-colour: #121212de;
     --drop-shadow-card-colour: grey;
     --accent-colour: purple;
+    --show-book: none;
+    --show-standard: flex;
 }
