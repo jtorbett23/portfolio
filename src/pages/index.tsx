@@ -26,10 +26,12 @@ const IndexPage: React.FC<PageProps> = () => {
       [setTheme]
     );
 
+  const mobileStyle = isMobile ? {alignSelf: 'center'} : {alignSelf: 'flex-start'}
+
 
   return (
     <div className={index}>
-      <header className={header}>
+      <header className={header} style={mobileStyle}>
         <ThemeSelector theme={theme} handleChange={handleChange}/>
       </header>
       <Book/>
