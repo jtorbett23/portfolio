@@ -45,3 +45,16 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
     --show-book: none;
     --show-standard: flex;
 }
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--text-colour);
+}
+
+a:hover, a:visited:hover  {
+    color:grey
+}
+
+a:visited {
+    color: var(--accent-colour)
+}
