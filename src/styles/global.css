@@ -56,5 +56,5 @@ a:hover, a:visited:hover  {
 }
 
 a:visited {
-    color: var(--accent-colour)
+    color: var(--text-colour)
 }
