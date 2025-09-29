@@ -48,7 +48,7 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
 a {
     font-weight: bold;
     text-decoration: none;
-    color: var(--text-colour);
+    color: var(--accent-colour);
 }
 
 a:hover, a:visited:hover  {

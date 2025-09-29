@@ -37,10 +37,10 @@
 			"url": "https://github.com/jtorbett23/ML-Number-Reader"
 		},
 		{
-			"title": "gitlab-pages-react-example",
-			"description": "Example of how to deploy a React App to Gitlab pages via Gitlab CI/CD.",
-			"tags": ["React", "Gitlab", "CI/CD", "Static Site Hosting"],
-			"url": "https://github.com/jtorbett23/gitlab-pages-react-example"
+			"title": "Leaderboard-TS",
+			"description": "Leaderboard API for saving and loading leaderboard scores.",
+			"tags": ["Typescript", "Express", "MYSQL"],
+			"url": "https://github.com/jtorbett23/Leaderboard-TS"
 		},
 		{
 			"title": "fastapi-render-tutorial",

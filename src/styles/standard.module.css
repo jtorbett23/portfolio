@@ -1,6 +1,6 @@
 .content {
 	display: flex;
-	display: var(--show-standard)
+	display: var(--show-standard);
 }
 .section1 {
 	width: 35%;
