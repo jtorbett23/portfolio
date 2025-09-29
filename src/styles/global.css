@@ -52,9 +52,9 @@ a {
 }
 
 a:hover, a:visited:hover  {
-    color:grey
+    color:var(--text-colour)
 }
 
 a:visited {
-    color: var(--text-colour)
+    color: grey
 }
