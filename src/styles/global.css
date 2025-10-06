@@ -52,9 +52,10 @@ a {
 }
 
 a:hover, a:visited:hover  {
-    color:var(--text-colour)
+    color: grey;
+
 }
 
 a:visited {
-    color: grey
+    color:var(--accent-colour);
 }
