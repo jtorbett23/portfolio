@@ -24,10 +24,10 @@ const FrontCover = ({currentLocation, zIndex}: FrontCoverProps) => {
   return (
         <div className={`${paper} ${currentLocation >= 2 ? flipped : null}`} style={{zIndex: zIndex}}>
             <div className={`${frontCover} ${currentLocation === 1 ? frontFrontCover: null} ${currentLocation === 2 ? backFrontCover: null}`}>
-                <div className={frontContent} style={{color: "white", flexDirection: "column"}}>
+                <div className={frontContent} style={{color: "white", flexDirection: "column", justifyContent: "center"}}>
                     <h1>Portfolio</h1>
-                    <h2>Joshua Torbett</h2>
                     <img className={avatarImage} src={headshot} alt={"Joshua Torbett Headshot"}/>
+                    <h2>Joshua Torbett</h2>
                 </div>
             </div>
             <div className={`${backCover} ${currentLocation === 1 ? frontFrontCover: null} ${currentLocation === 2 ? backFrontCover: null}`}>
