@@ -4,8 +4,7 @@
  * html, body, #___gatsby &  
  * div with role="group"
 */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
 
 html, body, #___gatsby, #gatsby-focus-wrapper {
     height: 100%;
@@ -21,6 +20,7 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
     --accent-colour: #74C8CC;
     --show-book: flex;
     --show-standard: none;
+    font-family: 'Handlee', sans-serif;
 }
 
 :root.light {
@@ -32,7 +32,7 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
     --accent-colour: #74C8CC;
     --show-book: none;
     --show-standard: flex;
-
+    font-family: 'Raleway', sans-serif;
 }
 
 :root.dark {
@@ -44,6 +44,7 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
     --accent-colour: purple;
     --show-book: none;
     --show-standard: flex;
+    font-family: 'Raleway', sans-serif;
 }
 a {
     font-weight: bold;
