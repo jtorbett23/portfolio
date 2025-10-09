@@ -202,6 +202,14 @@
     justify-self: center;
 }
 
+.sectionPage {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width : 1200px ) {
 	.book{
 		min-width: 300px;

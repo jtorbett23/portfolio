@@ -1,5 +1,6 @@
 import React from "react"
 import { PageSideContent } from "../../../types"
+import {sectionPage} from "../../../styles/book.module.css"
 import Project from "./project-page"
 import data from '../../../data.json'
 
@@ -7,9 +8,9 @@ import projectIcon from '../../../assets/project-icon.svg'
 
 const ProjectSection = () => {
     return (
-        <div style={{height: "100%", display: "flex", flexDirection:"column", justifyContent: "center"}}>
+        <div className={sectionPage}>
             <h1>Projects</h1>
-            <img width={100} src={projectIcon}/>
+            <img width={300} src={projectIcon}/>
         </div>
     )
 }

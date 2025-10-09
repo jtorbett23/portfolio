@@ -1,14 +1,15 @@
 import React from "react"
 import { PageSideContent} from "../../../types"
 import Article from "./article-page"
+import {sectionPage} from "../../../styles/book.module.css"
 import data from '../../../data.json'
 import articleIcon from '../../../assets/article-icon.svg'
 
 const ArticleSection = () => {
     return (
-        <div style={{height: "100%", display: "flex", flexDirection:"column", justifyContent: "center"}}>
+        <div className={sectionPage}>
             <h1>Articles</h1>
-            <img width={100} src={articleIcon}/>
+            <img width={300} src={articleIcon}/>
         </div>
     )
 }
