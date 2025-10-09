@@ -13,6 +13,14 @@ type FrontCoverProps = {
 }
 
 const FrontCover = ({currentLocation, zIndex}: FrontCoverProps) => {
+
+    const getContent = (info: Contact) => {
+        if(info.url)
+            return <a href={info.url} target="_blank" rel="noopener noreferrer"> <span>{info.content}</span> </a>
+
+        return <span>{info.content}</span>
+    }
+
   return (
         <div className={`${paper} ${currentLocation >= 2 ? flipped : null}`} style={{zIndex: zIndex}}>
             <div className={`${frontCover} ${currentLocation === 1 ? frontFrontCover: null} ${currentLocation === 2 ? backFrontCover: null}`}>
@@ -26,7 +34,7 @@ const FrontCover = ({currentLocation, zIndex}: FrontCoverProps) => {
                 <div className={backContent} style={{color: "white", flexDirection: "column"}}> 
                     <h1>Contact</h1>
                     {data.contact.map((info: Contact, index: number) => {
-                        return <div key={index} className={infoText}><span>{getIcon(info.title)} {info.title}:</span> <span>{info.content}</span></div>
+                        return <div key={index} className={infoText}><span>{getIcon(info.title)} {info.title}:</span> <span>{getContent(info)}</span></div>
                     })}
                 </div>
             </div>
