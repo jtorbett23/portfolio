@@ -5,31 +5,31 @@
     align-items: center;
 }
 
-.tag:hover, .tagBack:hover, .leftPageTrigger:hover, .rightPageTrigger:hover {
+.tab:hover, .tabBack:hover, .leftPageTrigger:hover, .rightPageTrigger:hover {
     cursor: pointer;
 }
 
-.tag
+.tab
 {
     width: 4%;
-    height: 8%;
-    top: -5%;
+    height: 10%;
+    top: -7%;
     position: absolute;
 }
 
-.tagBack {
+.tabBack {
     width: 4%;
-    height: 5%;
-    top: -5%;
+    height: 7%;
+    top: -7%;
     position: absolute;
 }
 
-.tag {
+.tab {
     z-index: 100;
     pointer-events: all;
 }
 
-.tagBack {
+.tabBack {
     z-index: -1;
     pointer-events: all;
 }

@@ -15,7 +15,7 @@ const ProjectSection = () => {
 }
 
 export const getProjects = () : Array<PageSideContent>  => {
-    let projects : Array<PageSideContent> = [{content: <ProjectSection/>, has_tag: true}]
+    let projects : Array<PageSideContent> = [{content: <ProjectSection/>, has_tab: true}]
     for (const project of data.projects)
         projects.push({content: <Project project={project}/>})
     return projects 

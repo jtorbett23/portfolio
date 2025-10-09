@@ -11,7 +11,7 @@ import AboutMe from "./pages/about-me-page"
 
 let tagIndex = -1
 
-const pageData : Array<PageSideContent> = [{content: <AboutMe/>, has_tag: true}, ...getProjects(), ...getArticles()] 
+const pageData : Array<PageSideContent> = [{content: <AboutMe/>, has_tab: true}, ...getProjects(), ...getArticles()] 
 
 
 const convertContent = (pageData: Array<PageSideContent>) => {
@@ -19,7 +19,7 @@ const convertContent = (pageData: Array<PageSideContent>) => {
     let currentPageIndex = 0
     for (let data of pageData)
     {
-        if(data.has_tag)
+        if(data.has_tab)
             tagIndex++
         if(convertedData.length === currentPageIndex + 1)
         {
@@ -27,14 +27,14 @@ const convertContent = (pageData: Array<PageSideContent>) => {
             convertedData[currentPageIndex].back = data.content
        
 
-            if(data.has_tag)
-                convertedData[currentPageIndex].has_tag_back = tagIndex
+            if(data.has_tab)
+                convertedData[currentPageIndex].has_tab_back = tagIndex
             currentPageIndex++
         }
         else{
-            convertedData.push({front: data.content, back: "", has_tag_front: -1, has_tag_back: -1})
-            if(data.has_tag)
-                convertedData[currentPageIndex].has_tag_front = tagIndex
+            convertedData.push({front: data.content, back: "", has_tab_front: -1, has_tab_back: -1})
+            if(data.has_tab)
+                convertedData[currentPageIndex].has_tab_front = tagIndex
         }
     }
 
