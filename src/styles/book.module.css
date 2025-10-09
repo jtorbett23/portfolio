@@ -5,43 +5,43 @@
     align-items: center;
 }
 
-.tag:hover, .tagBack:hover, .leftPageTrigger:hover, .rightPageTrigger:hover {
+.tab:hover, .tabBack:hover, .leftPageTrigger:hover, .rightPageTrigger:hover {
     cursor: pointer;
 }
 
-.tag
+.tab
 {
     width: 4%;
-    height: 8%;
-    top: -5%;
+    height: 10%;
+    top: -7%;
     position: absolute;
 }
 
-.tagBack {
+.tabBack {
     width: 4%;
-    height: 5%;
-    top: -5%;
+    height: 7%;
+    top: -7%;
     position: absolute;
 }
 
-.tag {
+.tab {
     z-index: 100;
     pointer-events: all;
 }
 
-.tagBack {
+.tabBack {
     z-index: -1;
     pointer-events: all;
 }
 
 .book {
     position: relative;
-    width: 30%;
-    min-height: 375px;
-    min-width: 250px;
-    aspect-ratio: 1/1;
+    min-width: 550px;
+    aspect-ratio: 1/1.3;
     transition: transform 0.5s;
 }
+
+
 
 .paper {
     position: absolute;
@@ -75,55 +75,25 @@
 }
 
 .rightPageTrigger{
-    min-width: 15%;
+    min-width: 25%;
     min-height: 100px;
     position: absolute;
     z-index: 500;
-    left: calc(100% - 10px - 10%); 
+    left: calc(100% - 10px - 15%); 
     height: calc(100% - 20px);
     opacity: 0.0;
 }
 
 
 .leftPageTrigger{
-    min-width: 15%;
+    min-width: 25%;
     min-height: 100px;
-    left: -100%;
+    left: -105%;
     position: absolute;
     z-index: 500;
     height: calc(100% - 20px);
     opacity: 0.0;
 }
-
-/* folded corners */
-
-/* .rightPageTrigger:hover ~ .paper > .pageCornerForward:after{
-box-sizing: border-box;
-content: '';
-padding:2%;
-position: absolute;
-top: 0px;
-right: 0px;
-background: linear-gradient(-135deg, black 50%, whitesmoke 0) no-repeat;
-border: 1px solid black;
-border-bottom-left-radius: 10px;
-background-repeat: no-repeat;
-z-index: 10;
-}
-
-.leftPageTrigger:hover ~ .paper > .pageCornerBackward:before{
-box-sizing: border-box;
-content: '';
-padding:2%;
-position: absolute;
-top: 0px;
-right: -1px;
-background: linear-gradient(-135deg, black 50%, whitesmoke 0) no-repeat;
-border: 1px solid black;
-border-bottom-left-radius: 10px;
-background-repeat: no-repeat;
-z-index: 10;
-} */
 
 
 .rightPageTrigger:hover ~ .paper > .pageCornerForward {
@@ -163,6 +133,7 @@ z-index: 10;
     align-items: center;
     flex-direction: column;
     pointer-events: all;
+    overflow: hidden;
 }
 
 .backContent {
@@ -180,4 +151,87 @@ z-index: 10;
 .sectionTitle {
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.contentTitle {
+    padding-top: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: center;
+}
+
+.descriptionText {
+    padding-bottom: 5%;
+    font-size: 18px;
+}
+
+.tagContainer {
+    align-self: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tagBubble {
+	margin: 5px;
+	padding: 5px;
+	background-color: var(--accent-colour);
+	border-radius: 10px;
+    font-size: 18px;
+}
+
+.pageContent {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 90%;
+}
+
+.linkSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    height: 100%;
+    width: 25%;
+    padding-top: 20px;
+}
+
+.linkContainer {
+    width: 150%;
+    justify-self: center;
+}
+
+.sectionPage {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width : 1200px ) {
+	.book{
+		min-width: 300px;
+        aspect-ratio: 1/1.3;
+        width: 46%;
+	}
+}
+
+@media (max-width : 800px ) {
+	.descriptionText{
+        font-size: 14px;
+	}
+    .contentTitle {
+        margin-bottom: 0px;
+    }
+    .tagBubble {
+        font-size: 14px;
+        margin: 2px;
+        padding: 3px;
+    }
+    .tagTitle {
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
 }

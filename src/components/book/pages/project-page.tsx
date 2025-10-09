@@ -1,6 +1,6 @@
 import React from "react"
 import { ProjectData } from "../../../types"
-import {techBubble} from "../../../styles/card.module.css"
+import { descriptionText, contentTitle, tagBubble, tagContainer, pageContent, linkContainer, linkSection} from "../../../styles/book.module.css"
 import { getIcon } from "../../icons"
 
 type ProjectProps = {
@@ -10,19 +10,19 @@ type ProjectProps = {
 const Project = ({project} : ProjectProps) => {
   return (
           <>
-            <h1 style={{paddingTop: "5%"}}>{project.title}</h1>
-            <div style={{padding: "20px", display: "flex", flexDirection:"column"}}>
-              <h2 style={{alignSelf: "flex-start"}}>Description</h2>
-              <span>{project.description}</span>
-              <h2 style={{alignSelf: "flex-start"}}>Tags</h2>
-                      <div style={{alignSelf: "flex-start"}}>
+            <h2 className={contentTitle}>{project.title}</h2>
+            <div className={pageContent}>
+              <span className={descriptionText}>{project.description}</span>
+                      <div className={tagContainer}>
                       {project.tags.map((tech : String, index: number)=> {
-                        return <span key={index} className={techBubble}>{tech}</span>
+                        return <span key={index} className={tagBubble}>{tech}</span>
                       })}
               </div>
-              <div style={{justifySelf: "center", alignSelf:"center", height:"25%", width:"25%", "paddingTop": "20px"}}>
+              <div className={linkSection}>
               <a href={project.url} target="_blank" rel="noopener noreferrer">
-              {getIcon("GitHub", "100%", "100%")}
+                <div className={linkContainer}>
+                {getIcon("GitHub", "100%", "100%")}
+                </div>
               </a>
               </div>
             </div>

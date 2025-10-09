@@ -13,20 +13,28 @@ type FrontCoverProps = {
 }
 
 const FrontCover = ({currentLocation, zIndex}: FrontCoverProps) => {
+
+    const getContent = (info: Contact) => {
+        if(info.url)
+            return <a href={info.url} target="_blank" rel="noopener noreferrer"> <span>{info.content}</span> </a>
+
+        return <span>{info.content}</span>
+    }
+
   return (
         <div className={`${paper} ${currentLocation >= 2 ? flipped : null}`} style={{zIndex: zIndex}}>
             <div className={`${frontCover} ${currentLocation === 1 ? frontFrontCover: null} ${currentLocation === 2 ? backFrontCover: null}`}>
-                <div className={frontContent} style={{color: "white", flexDirection: "column"}}>
+                <div className={frontContent} style={{color: "white", flexDirection: "column", justifyContent: "center"}}>
                     <h1>Portfolio</h1>
-                    <h2>Joshua Torbett</h2>
                     <img className={avatarImage} src={headshot} alt={"Joshua Torbett Headshot"}/>
+                    <h2>Joshua Torbett</h2>
                 </div>
             </div>
             <div className={`${backCover} ${currentLocation === 1 ? frontFrontCover: null} ${currentLocation === 2 ? backFrontCover: null}`}>
-                <div className={backContent} style={{color: "white", flexDirection: "column"}}> 
-                    <h1>Contact</h1>
-                    {data.contact.map((info: Contact, index: number) => {
-                        return <div key={index} className={infoText}><span>{getIcon(info.title)} {info.title}:</span> <span>{info.content}</span></div>
+                <div className={backContent} style={{color: "white", flexDirection: "column", justifyContent: "center"}}> 
+                    <h1>Contact</h1>{
+                    data.contact.map((info: Contact, index: number) => {
+                        return <div key={index} className={infoText}><span>{getIcon(info.title)} {info.title}:</span> <span>{getContent(info)}</span></div>
                     })}
                 </div>
             </div>

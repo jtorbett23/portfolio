@@ -14,8 +14,7 @@ const IndexPage: React.FC<PageProps> = () => {
         if(window.__theme !== undefined)
           setTheme(String(window.__theme))
         else
-          setTheme('light')
-        // setTheme(!window.__isMobile ? 'book' : 'light')
+          setTheme(!window.__isMobile ? 'book' : 'light')
         setIsMobile(window.__isMobile)
     },[typeof window !== "undefined" && typeof window.localStorage !== undefined])
   
