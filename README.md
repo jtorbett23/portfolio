@@ -18,8 +18,3 @@ Live Url: https://jtorbett23.github.io/portfolio
 - https://www.gatsbyjs.com/docs/
 - https://pages.github.com
 - https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/how-gatsby-works-with-github-pages/
-
-
-Todo:
-- Increase colour theme by tags and page colour matching more (pastel)
-- Title pages make stuff biggers
