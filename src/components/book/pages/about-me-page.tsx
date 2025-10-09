@@ -1,6 +1,6 @@
 import React from "react"
 import data from "../../../data.json"
-import { descriptionText, contentTitle, tagBubble, tagContainer, pageContent, linkContainer} from "../../../styles/book.module.css"
+import { descriptionText, tagTitle, tagBubble, tagContainer} from "../../../styles/book.module.css"
 
 const AboutMe = () => {
   return (
@@ -10,7 +10,7 @@ const AboutMe = () => {
           <span className={descriptionText}>{data.intro}</span>
           <span className={descriptionText}>
             I enjoy learning new technologies, hosting projects with free solutions, and sharing that knowledge with others.</span>
-          <h3>Technologies</h3>
+          <h3 className={tagTitle}>Technologies</h3>
           <div className={tagContainer}> 
             {data.technologies.map((tech : String, index:number)=> {
                 return <span key={index} className={tagBubble}>{tech}</span>
