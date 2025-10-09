@@ -16,7 +16,7 @@ const Article = ({article}: ArticleProps) => {
           <h2 style={{alignSelf: "flex-start"}}>Description</h2>
           <span>{article.description}</span>
           <h2 style={{alignSelf: "flex-start"}}>Tags</h2>
-                  <div style={{alignSelf: "flex-start"}}>
+                  <div style={{alignSelf: "flex-start", display: "flex", flexWrap: "wrap"}}>
                   {article.tags.map((tech : String, index: number)=> {
                     return <span key={index} className={techBubble}>{tech}</span>
                   })}

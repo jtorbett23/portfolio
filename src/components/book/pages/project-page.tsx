@@ -15,7 +15,7 @@ const Project = ({project} : ProjectProps) => {
               <h2 style={{alignSelf: "flex-start"}}>Description</h2>
               <span>{project.description}</span>
               <h2 style={{alignSelf: "flex-start"}}>Tags</h2>
-                      <div style={{alignSelf: "flex-start"}}>
+                      <div style={{alignSelf: "flex-start", display: "flex", flexWrap: "wrap"}}>
                       {project.tags.map((tech : String, index: number)=> {
                         return <span key={index} className={techBubble}>{tech}</span>
                       })}
