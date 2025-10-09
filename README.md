@@ -21,13 +21,5 @@ Live Url: https://jtorbett23.github.io/portfolio
 
 
 Todo:
-- Make the page transistion area larger
-- Increase length of the tab
-- Move contact page information to middle
 - Increase colour theme by tags and page colour matching more (pastel)
-- Reorder link button to above tags and  increase size
 - Title pages make stuff biggers
-- Front page - image in the middle and name at bottom
-    - try removing picture to about me
-- Checkout slip - for library for contact
-    - Past companies 
