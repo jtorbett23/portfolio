@@ -13,9 +13,12 @@ exports.onRenderBody = ({ setHeadComponents }) => {
         document.documentElement.className = 'dark';
       } else if (theme === 'light') {
         document.documentElement.className = 'light';
-      }
-      else {
+      } else if (theme === 'book') {
+        document.documentElement.className = 'book';
+      } else if (window.navigator.maxTouchPoints < 1) {
         document.documentElement.className = '';
+      } else {
+        document.documentElement.className = 'light';
       }
       window.__theme = theme;
     };
