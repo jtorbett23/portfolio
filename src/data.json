@@ -31,10 +31,10 @@
 	
 	"projects": [
 		{
-			"title": "MNIST Number Reader",
-			"description": "Allows users to draw numbers on a pygame based UI, which are sent to a machine learning model to predict which number was drawn.",
+			"title": "MNIST Digit Reader",
+			"description": "Allows users to draw a digit on a pygame based UI, which is sent to a machine learning model to predict which digit was drawn.",
 			"tags": ["Python", "Tensorflow", "Google Cloud", "pygame"],
-			"url": "https://github.com/jtorbett23/ML-Number-Reader"
+			"url": "https://github.com/jtorbett23/ML-Digit-Reader"
 		},
 		{
 			"title": "Leaderboard-TS",
