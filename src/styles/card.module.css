@@ -3,6 +3,7 @@
 	border-radius: 25px;
 	margin: 5px;
 	padding: 10px 10px;
+	width: 45%;
 	filter: drop-shadow(var(--drop-shadow-card-colour) 1px 1px 1px);
 
 }
@@ -72,4 +73,10 @@
 .tagContainer {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+@media (max-width : 950px ) {
+	.cardContainer {
+		width: auto;
+	}
 }

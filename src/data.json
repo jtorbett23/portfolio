@@ -62,6 +62,13 @@
 			"description": "A tutorial for how to deploy a fastapi App to Render via Github Actions (CI/CD).",
 			"tags": ["fastapi", "Github Actions", "CI/CD", "API Hosting"],
 			"url": "https://dev.to/jtorbett23/render-github-actions-2b92"
+		},
+		{
+			"title": "Hosting a Godot Server on Oracle Cloud",
+			"description": "A tutorial for how to deploy a Godot Server on Oracle Cloud.",
+			"tags": ["Godot", "Oracle", "Server Hosting"],
+			"url": "https://dev.to/jtorbett23/hosting-a-godot-server-on-oracle-cloud-2p4g"
 		}
+
 	]
 }
